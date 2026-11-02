@@ -6,7 +6,7 @@ Domain: https://www.twinscare-pflegedienst.de
 ## Stack
 - Next.js (App Router), TypeScript, reines CSS (`app/globals.css`)
 - Schriften selbst gehostet über Fontsource: Bricolage Grotesque (Überschriften), Atkinson Hyperlegible (Text)
-- Formular-Versand über Resend (`app/api/rueckruf/route.ts`)
+- Formular-Versand über Resend (`app/api/anfrage/route.ts`, eine Route für Rückruf und Pflegegrad-Rechner). Erfolgreiche Anfragen lösen `dataLayer.push({ event: "lead" })` für das Conversion-Tracking aus.
 - Hosting: Vercel
 
 ## Lokal starten

@@ -255,8 +255,9 @@ export default function Startseite() {
                 Leistungen in Frage kommen.
               </p>
               <ul>
-                <li>Kein Name, keine E-Mail nötig</li>
-                <li>Ausführlicher Rechner mit allen Modulen der Begutachtung</li>
+                <li>Ihr Ergebnis direkt nach den Fragen</li>
+                <li>Kostenloser Rückruf einer Pflegeberaterin dazu</li>
+                <li>Hilfe beim Antrag und bei der Begutachtung</li>
               </ul>
               <a href="/pflegegrad-rechner/">Zum ausführlichen Pflegegrad-Rechner</a>
             </div>

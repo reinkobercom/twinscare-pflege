@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Check } from "./Icons";
+import { sendeAnfrage, fehlertext } from "@/lib/lead";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -15,21 +16,11 @@ export default function RueckrufForm() {
     setStatus("sending");
     setError("");
     try {
-      const res = await fetch("/api/rueckruf", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      const json = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(json.error || "Senden fehlgeschlagen");
+      await sendeAnfrage({ ...data, typ: "rueckruf" });
       setStatus("sent");
     } catch (err) {
       setStatus("error");
-      setError(
-        err instanceof Error && err.message !== "Failed to fetch"
-          ? err.message
-          : "Die Nachricht wurde nicht gesendet. Bitte rufen Sie uns direkt an."
-      );
+      setError(fehlertext(err));
     }
   }
 

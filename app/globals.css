@@ -7,6 +7,7 @@
   --navy-soft: #2a4f82;
   --red: #c91f2a;
   --red-deep: #a8161f;
+  --red-soft: #fbeaeb;
   --sky: #e9f0f7;
   --mist: #f6f9fc;
   --line: #d4dfeb;
@@ -16,7 +17,7 @@
   --good: #1f7a4d;
 
   --font-head: "Bricolage Grotesque Variable", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Bricolage Grotesque Variable", "Segoe UI", system-ui, sans-serif;
 
   --step--1: 0.9rem;
   --step-0: 1.1875rem; /* 19 px: gut lesbar für ältere Augen */
@@ -65,6 +66,13 @@ body {
   color: var(--ink);
   background: var(--white);
   text-rendering: optimizeLegibility;
+  font-variation-settings: "opsz" 14;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
 }
 
 img,
@@ -145,14 +153,6 @@ a {
 }
 
 /* ---------- Buttons ---------- */
-.btn,
-.header-phone,
-.day time,
-.step-meta,
-.area-list small,
-.plz-check input {
-  font-family: var(--font-head) !important;
-}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -184,14 +184,18 @@ a {
   background: var(--navy-deep);
 }
 .btn-call {
+  background: var(--red);
+  color: #fff;
+}
+.btn-call:hover {
+  background: var(--red-deep);
+}
+.btn-ghost {
   background: #fff;
   color: var(--navy);
   border-color: var(--line);
 }
-.btn-call svg {
-  color: var(--red);
-}
-.btn-call:hover {
+.btn-ghost:hover {
   border-color: var(--navy);
 }
 .btn-light {
@@ -263,7 +267,7 @@ a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--navy);
+  color: var(--red);
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -412,7 +416,7 @@ a {
   width: 24px;
   height: 24px;
   margin-top: 0.15rem;
-  color: var(--good);
+  color: var(--red);
 }
 
 /* Das Markenmotiv: Bilder sitzen unter dem Giebel aus dem Logo. */
@@ -442,6 +446,7 @@ a {
   pointer-events: none;
 }
 .hero-note {
+  border-left: 4px solid var(--red);
   position: absolute;
   left: -1.5rem;
   bottom: 2rem;
@@ -508,10 +513,7 @@ a {
   .roof-frame {
     margin-bottom: 2.5rem;
   }
-  .roof-frame .photo-placeholder {
-    justify-content: center;
-    padding-bottom: 3.5rem;
-  }
+  
 }
 @media (max-width: 640px) {
   .hero-ctas .btn {
@@ -543,7 +545,7 @@ a {
   flex: none;
   width: 34px;
   height: 34px;
-  color: var(--navy);
+  color: var(--red);
 }
 @media (max-width: 900px) {
   .trust ul {
@@ -639,7 +641,7 @@ a {
 .leistung .chev {
   width: 28px;
   height: 28px;
-  color: var(--navy);
+  color: var(--red);
   margin-top: 0.25rem;
   transition: transform 0.15s ease;
 }
@@ -697,7 +699,7 @@ a {
   width: 48px;
   height: 48px;
   border-radius: 999px;
-  background: var(--navy);
+  background: var(--red);
   color: #fff;
   font-family: var(--font-head);
   font-size: 1.35rem;
@@ -722,7 +724,7 @@ a {
     top: 3.5rem;
     right: -1.5rem;
     width: 1.5rem;
-    border-top: 2px dashed var(--navy-soft);
+    border-top: 2px dashed var(--red);
   }
 }
 @media (max-width: 860px) {
@@ -761,7 +763,7 @@ a {
 .check-bar span {
   display: block;
   height: 100%;
-  background: #fff;
+  background: var(--red);
   border-radius: 99px;
   transition: width 0.3s ease;
 }
@@ -878,7 +880,7 @@ a {
   border: 2px solid var(--navy);
 }
 .compare-us svg {
-  color: var(--good);
+  color: var(--red);
 }
 @media (max-width: 760px) {
   .compare {
@@ -938,6 +940,9 @@ a {
 }
 .area-list a:hover {
   color: var(--red);
+}
+.area-list a::after {
+  content: none;
 }
 .plz-check {
   display: flex;
@@ -1008,8 +1013,8 @@ a {
   top: 0;
   left: 0;
   background: #fff;
-  border: 2px solid var(--navy);
-  color: var(--navy);
+  border: 2px solid var(--red);
+  color: var(--red);
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 1.1rem;
@@ -1154,8 +1159,8 @@ a {
   width: 32px;
   height: 32px;
   border-radius: 999px;
-  background: var(--sky)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23123765' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E")
+  background: var(--red-soft)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c91f2a' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E")
     center / 18px no-repeat;
   transition: transform 0.2s ease;
 }
@@ -1186,13 +1191,11 @@ a {
 .closing::before {
   content: "";
   position: absolute;
-  right: 3%;
-  bottom: -90px;
-  width: min(520px, 60vw);
-  aspect-ratio: 1 / 0.95;
-  background: rgba(255, 255, 255, 0.045);
-  clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0% 100%, 0% 38%);
-  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 6px;
+  background: var(--red);
 }
 .closing-grid {
   position: relative;
@@ -1394,6 +1397,16 @@ fieldset.field {
   gap: 1rem;
   font-size: 0.95rem;
 }
+.made-with {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.made-with svg {
+  width: 18px;
+  height: 18px;
+  color: var(--red);
+}
 .footer-bottom ul {
   display: flex;
   flex-wrap: wrap;
@@ -1447,8 +1460,9 @@ fieldset.field {
     width: 22px;
     height: 22px;
   }
-  .action-bar a.call svg {
-    color: var(--red);
+  .action-bar a.call {
+    background: var(--red);
+    color: #fff;
   }
   .action-bar a.primary {
     background: var(--navy);
@@ -1456,5 +1470,27 @@ fieldset.field {
   }
   body {
     padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
+
+/* ---------- Fotos ---------- */
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.day-photo {
+  position: relative;
+  aspect-ratio: 21 / 8;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  background: var(--sky);
+}
+@media (max-width: 640px) {
+  .day-photo {
+    aspect-ratio: 4 / 3;
   }
 }

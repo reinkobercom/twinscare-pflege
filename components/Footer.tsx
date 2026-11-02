@@ -1,4 +1,5 @@
 import { site, orte, leistungen } from "@/lib/site";
+import { Heart } from "./Icons";
 
 export default function Footer() {
   return (
@@ -68,7 +69,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} TwinsCare</span>
+          <span className="made-with">
+            © {new Date().getFullYear()} TwinsCare – Mit <Heart aria-label="Herz" role="img" /> aus Hamburg
+          </span>
           <ul>
             <li><a href="/impressum/">Impressum</a></li>
             <li><a href="/datenschutz/">Datenschutz</a></li>

@@ -6,7 +6,7 @@ import AreaMap from "@/components/AreaMap";
 import Footer from "@/components/Footer";
 import {
   Phone, Check, Cross, Chevron, Whatsapp, Form, Star, Hands, Syringe, Pause, Basket, Talk, Clinic,
-  Shield, Home, People, Clock, BrandMark,
+  Shield, Home, People, Clock,
 } from "@/components/Icons";
 import { site, orte, leistungen } from "@/lib/site";
 
@@ -82,14 +82,28 @@ const jsonLd = {
   ],
 };
 
-function PhotoPlaceholder({ label }: { label: string }) {
+// Platzhalterfotos von Unsplash (kostenlos nutzbar, Unsplash-Lizenz). Vor dem Livegang durch eigene Fotos ersetzen.
+function Photo({ id, alt, priority }: { id: string; alt: string; priority?: boolean }) {
+  const base = `https://images.unsplash.com/${id}?auto=format&fit=crop&q=75`;
   return (
-    <div className="photo-placeholder">
-      <BrandMark />
-      <span>{label}</span>
-    </div>
+    <img
+      className="photo"
+      src={`${base}&w=900`}
+      srcSet={`${base}&w=600 600w, ${base}&w=900 900w, ${base}&w=1400 1400w`}
+      sizes="(max-width: 900px) 100vw, 50vw"
+      alt={alt}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+    />
   );
 }
+
+const team = [
+  { rolle: "Geschäftsführung", foto: "photo-1741707039536-113e200f9e0d" },
+  { rolle: "Pflegedienstleitung", foto: "photo-1587556930720-58ec521056a5" },
+  { rolle: "Pflegefachkraft", foto: "photo-1587500154541-1cafd74f0efc" },
+  { rolle: "Pflegeberatung", foto: "photo-1765896387398-1e1ae8d2eb85" },
+];
 
 export default function Startseite() {
   return (
@@ -129,7 +143,7 @@ export default function Startseite() {
             </div>
             <div className="roof-frame">
               <div className="roof-shape">
-                <PhotoPlaceholder label="Teamfoto folgt" />
+                <Photo id="photo-1765896387387-0538bc9f997e" alt="Pflegekraft im Gespräch mit einer älteren Patientin" priority />
               </div>
               <svg className="roof-line" viewBox="0 0 100 34" preserveAspectRatio="none" aria-hidden>
                 <path d="M0 34 L50 0 L100 34" fill="none" stroke="#123765" strokeWidth="4" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" />
@@ -170,7 +184,7 @@ export default function Startseite() {
                 <h2 id="leistungen-titel">Wobei wir Sie unterstützen</h2>
                 <p>Von der täglichen Grundpflege bis zur Beratung beim Pflegegrad – alles aus einer Hand.</p>
               </div>
-              <a className="btn btn-call" href="/leistungen/">
+              <a className="btn btn-ghost" href="/leistungen/">
                 Alle Leistungen
               </a>
             </div>
@@ -310,6 +324,9 @@ export default function Startseite() {
               <h2 id="tag-titel">So kann ein Tag mit uns aussehen</h2>
               <p>Jeder Plan ist anders. Dieses Beispiel zeigt, wie wir einen Tag begleiten können.</p>
             </div>
+            <div className="day-photo">
+              <Photo id="photo-1773227055624-07b515ba87c5" alt="Pflegekraft begleitet eine ältere Frau mit Rollator" />
+            </div>
             <ol className="day">
               <li>
                 <time>7:30</time>
@@ -366,15 +383,15 @@ export default function Startseite() {
                 <h2 id="team-titel">Die Menschen, die zu Ihnen kommen</h2>
                 <p>Ein Team aus Bergedorf, das Pflege als Handwerk versteht.</p>
               </div>
-              <a className="btn btn-call" href="/team/">
+              <a className="btn btn-ghost" href="/team/">
                 Das ganze Team
               </a>
             </div>
             <div className="team">
-              {["Geschäftsführung", "Pflegedienstleitung", "Pflegefachkraft", "Pflegeberatung"].map((rolle) => (
+              {team.map(({ rolle, foto }) => (
                 <div className="member" key={rolle}>
                   <div className="member-photo">
-                    <PhotoPlaceholder label="Foto folgt" />
+                    <Photo id={foto} alt="" />
                   </div>
                   <h3>Name folgt</h3>
                   <p>{rolle}</p>

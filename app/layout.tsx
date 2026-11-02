@@ -1,7 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/bricolage-grotesque";
-import "@fontsource/atkinson-hyperlegible/400.css";
-import "@fontsource/atkinson-hyperlegible/700.css";
 import "./globals.css";
 import { site } from "@/lib/site";
 
@@ -20,7 +18,6 @@ export const metadata: Metadata = {
     description:
       "Pflege zu Hause in Bergedorf und Umgebung. Kostenlose Erstberatung, feste Ansprechpartner, Abrechnung direkt mit der Kasse.",
   },
-  icons: { icon: "/favicon.svg" },
 };
 
 export const viewport: Viewport = {

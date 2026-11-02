@@ -49,7 +49,7 @@ export default function AreaMap() {
           <a key={p.slug} href={`/pflegedienst/${p.slug}/`}>
             <circle cx={p.x} cy={p.y} r="16" fill="transparent" />
             <circle cx={p.x} cy={p.y} r="7" fill="#fff" stroke="#123765" strokeWidth="3" />
-            <text x={p.x} y={p.y + p.dy} fontSize="16" fontWeight="700" fill="#123765" textAnchor={p.anchor} fontFamily="Atkinson Hyperlegible, sans-serif">
+            <text x={p.x} y={p.y + p.dy} fontSize="16" fontWeight="700" fill="#123765" textAnchor={p.anchor}>
               {p.name}
             </text>
           </a>
@@ -60,7 +60,7 @@ export default function AreaMap() {
           <circle cx={sitz.x} cy={sitz.y} r="30" fill="#c91f2a" fillOpacity="0.12" />
           <path d={`M${sitz.x - 15} ${sitz.y + 2} L${sitz.x} ${sitz.y - 11} L${sitz.x + 15} ${sitz.y + 2}`} fill="none" stroke="#c91f2a" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
           <path d={`M${sitz.x} ${sitz.y + 12} c-5 -3.5 -7.5 -6 -7.5 -8.7 a3.4 3.4 0 0 1 7.5 -1.3 a3.4 3.4 0 0 1 7.5 1.3 c0 2.7 -2.5 5.2 -7.5 8.7z`} fill="#c91f2a" />
-          <text x={sitz.x} y={sitz.y + 50} fontSize="17" fontWeight="700" fill="#123765" textAnchor="middle" fontFamily="Atkinson Hyperlegible, sans-serif">
+          <text x={sitz.x} y={sitz.y + 50} fontSize="17" fontWeight="700" fill="#123765" textAnchor="middle">
             Bergedorf
           </text>
           <text x={sitz.x} y={sitz.y + 68} fontSize="13" fill="#4b5d73" textAnchor="middle">

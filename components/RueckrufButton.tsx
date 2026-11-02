@@ -18,7 +18,7 @@ export default function RueckrufButton() {
       e.forEach((x) => (x.isIntersecting ? imBild.add(x.target) : imBild.delete(x.target)));
       update();
     });
-    document.querySelectorAll(".closing, .site-footer").forEach((el) => io.observe(el));
+    document.querySelectorAll(".closing, .site-footer, .cta-band, .side-card, .inline-cta, .callback, .funnel, .check-card").forEach((el) => io.observe(el));
     update();
     window.addEventListener("scroll", update, { passive: true });
     return () => {

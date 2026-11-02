@@ -16,7 +16,7 @@ export default function RueckrufForm() {
     setStatus("sending");
     setError("");
     try {
-      await sendeAnfrage({ ...data, typ: "rueckruf" });
+      await sendeAnfrage({ ...data, typ: "rueckruf", quelle: `Rückruf-Formular (${window.location.pathname})` });
       setStatus("sent");
     } catch (err) {
       setStatus("error");

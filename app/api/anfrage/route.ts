@@ -67,9 +67,35 @@ export async function POST(req: Request) {
       ["Angezeigte Einschätzung", str(b.einschaetzung)],
       ["Quelle", "Startseite, Pflegegrad-Rechner"]
     );
+    const details = str(b.details, 4000);
+    if (details) felder.splice(felder.length - 1, 0, ["Antworten im Rechner", details]);
+    if (str(b.quelle)) felder[felder.length - 1] = ["Quelle", str(b.quelle)];
+  } else if (typ === "anfrage") {
+    if (email && !/^\S+@\S+\.\S+$/.test(email)) {
+      return NextResponse.json({ error: "Bitte prüfen Sie Ihre E-Mail-Adresse." }, { status: 422 });
+    }
+    if (!yes(b.gesundheitsdaten)) {
+      return NextResponse.json(
+        { error: "Bitte stimmen Sie der Verarbeitung der Angaben zur Pflegesituation zu." },
+        { status: 422 }
+      );
+    }
+    betreff = `Pflegeanfrage: ${name}${plz ? ` (${plz})` : ""}`;
+    felder.push(
+      ["E-Mail", email || "–"],
+      ["Für wen", str(b.fuerWen)],
+      ["Gewünschte Hilfe", str(b.hilfe, 400)],
+      ["Pflegegrad", str(b.pflegegrad)],
+      ["PLZ / Ort", `${plz} ${str(b.ort, 80)}`.trim()],
+      ["Gewünschter Beginn", str(b.beginn)],
+      ["Wohnsituation", str(b.wohnsituation)],
+      ["Rückruf", str(b.zeit, 30) || "Egal"],
+      ["Nachricht", str(b.nachricht, 2000) || "–"],
+      ["Quelle", str(b.quelle, 120) || "Anfrage-Formular"]
+    );
   } else if (typ === "rueckruf") {
     betreff = `Rückrufwunsch: ${name}`;
-    felder.push(["Erreichbar", str(b.zeit, 30) || "Egal"], ["Quelle", "Startseite, Rückruf-Formular"]);
+    felder.push(["Erreichbar", str(b.zeit, 30) || "Egal"], ["Quelle", str(b.quelle, 120) || "Rückruf-Formular"]);
   } else {
     return NextResponse.json({ error: "Unbekannter Anfragetyp." }, { status: 400 });
   }

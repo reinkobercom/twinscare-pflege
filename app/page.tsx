@@ -1,52 +1,20 @@
-import Header from "@/components/Header";
 import PflegegradCheck from "@/components/PflegegradCheck";
 import PlzCheck from "@/components/PlzCheck";
 import RueckrufForm from "@/components/RueckrufForm";
 import AreaMap from "@/components/AreaMap";
-import Footer from "@/components/Footer";
+import Photo from "@/components/Photo";
 import {
   Phone, Check, Cross, Chevron, Whatsapp, Form, Star, Hands, Syringe, Pause, Basket, Talk, Clinic,
   Shield, Home, People, Clock,
 } from "@/components/Icons";
 import { site, orte, leistungen, kapazitaet } from "@/lib/site";
-import RueckrufButton from "@/components/RueckrufButton";
+import { startFaqs as faqs } from "@/lib/faqs";
+import { artikel } from "@/lib/content";
+import ArtikelGrid from "@/components/ArtikelGrid";
 
 const leistungsIcons = [Hands, Syringe, Pause, Basket, Talk, Clinic];
 
-const faqs = [
-  {
-    q: "Was kostet ein ambulanter Pflegedienst?",
-    a: "Mit Pflegegrad zahlt die Pflegekasse jeden Monat einen festen Betrag für die Pflege zu Hause – bei Pflegegrad 3 zum Beispiel 1.497 € (Stand 2026). Wir rechnen direkt mit der Kasse ab. Behandlungspflege mit ärztlicher Verordnung übernimmt die Krankenkasse. Einen Eigenanteil zahlen Sie nur, wenn Sie mehr Leistungen wünschen, als das Budget abdeckt. Vor dem Start bekommen Sie einen kostenlosen Kostenvoranschlag.",
-  },
-  {
-    q: "Brauche ich einen Pflegegrad?",
-    a: "Für die Grundpflege über die Pflegekasse brauchen Sie mindestens Pflegegrad 2, für den Entlastungsbetrag reicht Pflegegrad 1. Für Behandlungspflege genügt eine ärztliche Verordnung, ein Pflegegrad ist nicht nötig. Noch keinen Pflegegrad? Wir helfen beim Antrag und bereiten Sie auf die Begutachtung vor.",
-  },
-  {
-    q: "Wie schnell können Sie mit der Pflege beginnen?",
-    a: "Nach dem ersten Anruf vereinbaren wir zügig einen Termin bei Ihnen zu Hause. Steht eine Entlassung aus dem Krankenhaus an, stimmen wir uns direkt mit dem Sozialdienst der Klinik ab, damit die Versorgung nahtlos weitergeht.",
-  },
-  {
-    q: "Kann ich meinen Pflegedienst selbst wählen oder wechseln?",
-    a: "Ja. Sie entscheiden frei, welcher Pflegedienst Sie versorgt. Einen Pflegevertrag können Sie jederzeit ohne Frist kündigen (§ 120 SGB XI). Den Wechsel zu uns organisieren wir mit Ihnen gemeinsam.",
-  },
-  {
-    q: "Was ist Verhinderungspflege?",
-    a: "Wenn pflegende Angehörige Urlaub machen, krank sind oder eine Pause brauchen, übernimmt ein Pflegedienst. Ab Pflegegrad 2 steht dafür seit Juli 2025 ein gemeinsamer Jahresbetrag von bis zu 3.539 € für Verhinderungs- und Kurzzeitpflege bereit. Die Pflege kann auch stundenweise erfolgen.",
-  },
-  {
-    q: "Wofür kann ich den Entlastungsbetrag von 131 € nutzen?",
-    a: "Ab Pflegegrad 1 stehen Ihnen jeden Monat 131 € für Hilfe im Alltag zu – etwa Haushalt, Einkaufen oder Begleitung zu Terminen. Nicht genutzte Beträge sammeln sich an und können bis zum 30. Juni des Folgejahres verwendet werden.",
-  },
-  {
-    q: "In welchen Orten sind Sie unterwegs?",
-    a: "Wir versorgen Bergedorf, Lohbrügge, Billstedt, Horn und Jenfeld in Hamburg sowie Oststeinbek, Glinde, Reinbek und Wentorf. Unser Büro ist in der Bergedorfer Straße 85.",
-  },
-  {
-    q: "Kommen immer dieselben Pflegekräfte?",
-    a: "Wir planen feste, kleine Teams pro Gebiet. So kennen Sie die Menschen, die zu Ihnen kommen, und wir kennen Ihre Gewohnheiten.",
-  },
-];
+
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -83,22 +51,6 @@ const jsonLd = {
   ],
 };
 
-// Platzhalterfotos von Unsplash (kostenlos nutzbar, Unsplash-Lizenz). Vor dem Livegang durch eigene Fotos ersetzen.
-function Photo({ id, alt, priority }: { id: string; alt: string; priority?: boolean }) {
-  const base = `https://images.unsplash.com/${id}?auto=format&fit=crop&q=75`;
-  return (
-    <img
-      className="photo"
-      src={`${base}&w=900`}
-      srcSet={`${base}&w=600 600w, ${base}&w=900 900w, ${base}&w=1400 1400w`}
-      sizes="(max-width: 900px) 100vw, 50vw"
-      alt={alt}
-      loading={priority ? "eager" : "lazy"}
-      decoding="async"
-    />
-  );
-}
-
 const team = [
   { rolle: "Geschäftsführung", foto: "photo-1741707039536-113e200f9e0d" },
   { rolle: "Pflegedienstleitung", foto: "photo-1587556930720-58ec521056a5" },
@@ -110,8 +62,6 @@ export default function Startseite() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <Header />
-
       <main id="inhalt">
         {/* Hero */}
         <section className="hero">
@@ -442,6 +392,22 @@ export default function Startseite() {
           </div>
         </section>
 
+        {/* Ratgeber */}
+        <section className="section" aria-labelledby="ratgeber-titel">
+          <div className="wrap">
+            <div className="section-head section-head-split">
+              <div>
+                <h2 id="ratgeber-titel">Wissen für Angehörige</h2>
+                <p>Verständlich erklärt, mit den aktuellen Beträgen für 2026.</p>
+              </div>
+              <a className="btn btn-ghost" href="/ratgeber/">
+                Zum Ratgeber
+              </a>
+            </div>
+            <ArtikelGrid items={artikel.slice(0, 3)} headingLevel="h3" />
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="section" aria-labelledby="faq-titel">
           <div className="wrap faq-grid">
@@ -491,20 +457,6 @@ export default function Startseite() {
         </section>
       </main>
 
-      <Footer />
-      <RueckrufButton />
-
-      <nav className="action-bar" aria-label="Schnellkontakt">
-        <a className="call" href={site.phoneHref}>
-          <Phone /> Anrufen
-        </a>
-        <a href={site.whatsappHref}>
-          <Whatsapp /> WhatsApp
-        </a>
-        <a className="primary" href="/pflege-anfragen/">
-          <Form /> Pflege anfragen
-        </a>
-      </nav>
     </>
   );
 }

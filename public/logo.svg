@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 460" role="img" aria-labelledby="title desc">
+  <title id="title">TwinsCare – Ambulanter Pflegedienst</title>
+  <desc id="desc">Modernes Logo in Dunkelblau und Rot mit Haus- und Familiensymbol sowie Wortmarke TwinsCare.</desc>
+  <defs>
+    <style>
+      .navy{fill:#123765}.red{fill:#C91F2A}
+      .word{font-family:Arial,Helvetica,sans-serif;font-weight:700;letter-spacing:-3px}
+      .sub{font-family:Arial,Helvetica,sans-serif;font-weight:400;letter-spacing:.2px}
+    </style>
+  </defs>
+  <g transform="translate(18 8)">
+    <!-- roof and chimney -->
+    <path class="navy" d="M8 164 L230 13 Q239 7 247 13 L365 96 L365 50 Q365 45 370 45 L410 45 Q415 45 415 50 L415 132 L478 164 L462 164 L239 45 L24 164 Z"/>
+    <!-- window -->
+    <g class="navy"><rect x="205" y="102" width="29" height="29" rx="1"/><rect x="245" y="102" width="29" height="29" rx="1"/><rect x="205" y="142" width="29" height="29" rx="1"/><rect x="245" y="142" width="29" height="29" rx="1"/></g>
+    <!-- adult figures forming a protective heart -->
+    <circle class="navy" cx="126" cy="205" r="31"/>
+    <circle class="red" cx="347" cy="205" r="31"/>
+    <path class="navy" d="M49 282 C49 244 78 229 126 229 C160 229 190 245 213 276 C183 261 151 260 131 274 C108 290 112 329 129 360 C147 393 179 416 195 430 L181 430 C112 393 49 341 49 282Z"/>
+    <path class="red" d="M424 282 C424 244 395 229 347 229 C313 229 283 245 260 276 C290 261 322 260 342 274 C365 290 361 329 344 360 C326 393 294 416 278 430 L292 430 C361 393 424 341 424 282Z"/>
+    <!-- central child -->
+    <circle class="navy" cx="237" cy="316" r="25"/>
+    <path class="navy" d="M177 328 C194 347 214 357 237 357 C260 357 280 347 297 328 C302 322 311 328 307 336 C295 359 277 374 258 381 L258 421 L237 438 L216 421 L216 381 C197 374 179 359 167 336 C163 328 172 322 177 328Z"/>
+  </g>
+  <!-- divider -->
+  <rect x="520" y="96" width="7" height="270" class="navy"/>
+  <!-- wordmark -->
+  <text x="575" y="267" class="word" font-size="184"><tspan class="navy">Twins</tspan><tspan class="red">Care</tspan></text>
+  <text x="580" y="335" class="sub navy" font-size="49">Ambulanter Pflegedienst GmbH &amp; Co. KG</text>
+</svg>

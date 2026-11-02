@@ -8,7 +8,8 @@ import {
   Phone, Check, Cross, Chevron, Whatsapp, Form, Star, Hands, Syringe, Pause, Basket, Talk, Clinic,
   Shield, Home, People, Clock,
 } from "@/components/Icons";
-import { site, orte, leistungen } from "@/lib/site";
+import { site, orte, leistungen, kapazitaet } from "@/lib/site";
+import RueckrufButton from "@/components/RueckrufButton";
 
 const leistungsIcons = [Hands, Syringe, Pause, Basket, Talk, Clinic];
 
@@ -116,6 +117,14 @@ export default function Startseite() {
         <section className="hero">
           <div className="wrap hero-grid">
             <div>
+              {kapazitaet.aktiv && (
+                <p className="capacity">
+                  <span className="capacity-dot" aria-hidden />
+                  Aktuell freie Plätze in {kapazitaet.orte.slice(0, -1).join(", ")}
+                  {kapazitaet.orte.length > 1 ? " und " : ""}
+                  {kapazitaet.orte.at(-1)}
+                </p>
+              )}
               <h1>Ambulanter Pflegedienst in Bergedorf und dem Hamburger Osten</h1>
               <p className="hero-lead">
                 Ambulante Pflege, Behandlungspflege und Entlastung für Ihre Familie – von Menschen, die ihren Stadtteil
@@ -209,6 +218,34 @@ export default function Startseite() {
           </div>
         </section>
 
+        {/* Bildband */}
+        <section className="mosaic-section" aria-labelledby="zuhause-titel">
+          <div className="wrap mosaic">
+            <div className="mosaic-text">
+              <svg className="mosaic-roof" viewBox="0 0 64 30" aria-hidden>
+                <path d="M3 27 L32 4 L61 27" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <h2 id="zuhause-titel">Zuhause bleiben, wo das Leben ist</h2>
+              <p>
+                Der eigene Sessel, die Nachbarin, der Weg zum Bäcker. Wir sorgen dafür, dass das so bleiben kann – mit
+                Pflege, die in Ihren Alltag passt und nicht umgekehrt.
+              </p>
+              <a className="btn btn-primary" href="/pflege-anfragen/">
+                Beratung anfragen
+              </a>
+            </div>
+            <div className="mosaic-a">
+              <Photo id="photo-1765896387377-e293914d1e69" alt="Zwei Frauen lachen gemeinsam in einer Wohnung" />
+            </div>
+            <div className="mosaic-b">
+              <Photo id="photo-1762955913084-96ea3f986468" alt="Pflegekraft strickt gemeinsam mit älteren Frauen" />
+            </div>
+            <div className="mosaic-c">
+              <Photo id="photo-1773234005378-ceebf3c877b9" alt="Zwei Hände halten einander" />
+            </div>
+          </div>
+        </section>
+
         {/* Ablauf */}
         <section className="section section-tint" aria-labelledby="ablauf-titel">
           <div className="wrap">
@@ -273,6 +310,9 @@ export default function Startseite() {
               <p>Viele Familien kommen nach schlechten Erfahrungen zu uns. Darauf achten wir besonders.</p>
             </div>
             <div className="compare">
+              <div className="compare-photo">
+                <Photo id="photo-1762955911431-4c44c7c3f408" alt="Pflegekraft malt gemeinsam mit einem älteren Ehepaar" />
+              </div>
               <div className="compare-col compare-other">
                 <h3>Oft erlebt</h3>
                 <ul>
@@ -427,6 +467,9 @@ export default function Startseite() {
 
         {/* Abschluss */}
         <section className="section closing" aria-labelledby="abschluss-titel">
+          <div className="closing-bg" aria-hidden>
+            <Photo id="photo-1761839257513-a921710a4291" alt="" />
+          </div>
           <div className="wrap closing-grid">
             <div>
               <h2 id="abschluss-titel">Lassen Sie uns sprechen</h2>
@@ -449,6 +492,7 @@ export default function Startseite() {
       </main>
 
       <Footer />
+      <RueckrufButton />
 
       <nav className="action-bar" aria-label="Schnellkontakt">
         <a className="call" href={site.phoneHref}>

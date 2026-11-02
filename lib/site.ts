@@ -20,6 +20,12 @@ export const site = {
     "https://www.google.com/maps/search/?api=1&query=Bergedorfer+Stra%C3%9Fe+85+21033+Hamburg",
 };
 
+// Hinweis auf freie Kapazitäten im Hero. Nur aktiv lassen, wenn es stimmt (mit Twinscare abstimmen).
+export const kapazitaet = {
+  aktiv: true,
+  orte: ["Bergedorf", "Lohbrügge", "Billstedt"], // TODO: aktuelle Orte mit freien Plätzen eintragen
+};
+
 export const orte = [
   { name: "Bergedorf", slug: "bergedorf", plz: "21029–21039", sitz: true },
   { name: "Lohbrügge", slug: "lohbruegge", plz: "21031, 21033, 22115" },

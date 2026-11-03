@@ -3,7 +3,9 @@ import { site } from "@/lib/site";
 import { Breadcrumbs } from "@/components/content";
 
 export const metadata: Metadata = {
-  title: "Impressum | TwinsCare",
+  title: "Impressum | TwinsCare ambulanter Pflegedienst Bergedorf",
+  description:
+    "Impressum der Twins Care ambulanter Pflegedienst GmbH & Co. KG, Bergedorfer Straße 85, 21033 Hamburg: Anbieterkennzeichnung und Kontakt.",
   alternates: { canonical: "/impressum/" },
 };
 

@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Pflege anfragen – kostenlose Beratung | TwinsCare Bergedorf",
   description:
-    "In drei Schritten Pflege anfragen: Wir rufen Sie zurück, beraten kostenlos bei Ihnen zu Hause und erstellen einen Kostenvoranschlag. Bergedorf und Hamburg-Ost.",
+    "In drei Schritten Pflege anfragen: Wir rufen zurück, beraten kostenlos bei Ihnen zu Hause und erstellen einen Kostenvoranschlag.",
   alternates: { canonical: "/pflege-anfragen/" },
 };
 
@@ -19,7 +19,7 @@ export default function AnfragePage() {
         <div className="funnel-layout">
           <div className="funnel-intro">
             <h1>Pflege anfragen</h1>
-            <p className="page-lead">Drei kurze Schritte, kostenlos und unverbindlich. Wir melden uns bei Ihnen.</p>
+            <p className="page-lead">Drei kurze Schritte, kostenlos und unverbindlich. Wir melden uns und beraten Sie in Bergedorf und Umgebung bei Ihnen zu Hause.</p>
             <ul className="funnel-facts">
               <li><Check /> Kostenlose Erstberatung bei Ihnen zu Hause</li>
               <li><Check /> Schriftlicher Kostenvoranschlag vor dem Start</li>

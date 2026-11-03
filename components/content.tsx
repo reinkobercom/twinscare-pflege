@@ -74,7 +74,7 @@ export function Blocks({ blocks }: { blocks: Block[] }) {
             );
           case "table":
             return (
-              <div className="table-wrap" key={i}>
+              <div className="table-wrap" key={i} tabIndex={0} role="region" aria-label={b.caption ?? "Tabelle"}>
                 <table>
                   {b.caption && <caption>{b.caption}</caption>}
                   <thead>
@@ -95,7 +95,7 @@ export function Blocks({ blocks }: { blocks: Block[] }) {
                               <Rich text={c} />
                             </th>
                           ) : (
-                            <td key={k}>
+                            <td key={k} data-label={b.head[k]}>
                               <Rich text={c} />
                             </td>
                           )

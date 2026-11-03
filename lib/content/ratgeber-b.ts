@@ -8,9 +8,9 @@ export const ratgeberB: Artikel[] = [
     slug: "verhinderungspflege-antrag",
     cluster: "verhinderungspflege",
     h1: "Verhinderungspflege 2026: Betrag, Voraussetzungen und Antrag",
-    metaTitle: "Verhinderungspflege 2026: 3.539 €, Antrag & Tipps",
+    metaTitle: "Verhinderungspflege 2026: 3.539 € und Antrag",
     metaDescription:
-      "Verhinderungspflege 2026: bis 3.539 € im Jahr ab Pflegegrad 2, stundenweise ohne Kürzung des Pflegegelds. So stellen Sie den Antrag – mit Fristen und Nachweisen.",
+      "Verhinderungspflege 2026: bis 3.539 € im Jahr ab Pflegegrad 2, auch stundenweise. So stellen Sie den Antrag – mit Fristen und Nachweisen.",
     lead:
       "Wenn pflegende Angehörige Urlaub brauchen oder krank werden, zahlt die Pflegekasse eine Ersatzpflege. Hier lesen Sie, wie viel Geld 2026 zur Verfügung steht, wer Anspruch hat und wie Sie die Kosten zurückbekommen.",
     veroeffentlicht: "2026-11-02",
@@ -292,9 +292,9 @@ export const ratgeberB: Artikel[] = [
     slug: "entlastungsbetrag-131-euro",
     cluster: "entlastung",
     h1: "Entlastungsbetrag 131 Euro: Wofür Sie ihn 2026 nutzen können",
-    metaTitle: "Entlastungsbetrag 131 €: Nutzung & Tipps in Hamburg",
+    metaTitle: "Entlastungsbetrag 131 €: wofür Sie ihn nutzen können",
     metaDescription:
-      "Entlastungsbetrag 2026: 131 € im Monat ab Pflegegrad 1. Wofür Sie ihn nutzen dürfen, wie Sie ansparen und abrechnen und welche Angebote in Hamburg anerkannt sind.",
+      "Entlastungsbetrag 2026: 131 € im Monat ab Pflegegrad 1. Wofür Sie ihn nutzen, wie Sie ansparen und abrechnen und welche Angebote anerkannt sind.",
     lead:
       "Jeden Monat stehen 131 € für Entlastung im Alltag bereit – doch viele Familien rufen das Geld nicht ab. Dieser Ratgeber zeigt, wofür der Entlastungsbetrag gilt, wo die Grenzen liegen und wie Sie ihn in Hamburg sinnvoll einsetzen.",
     veroeffentlicht: "2026-11-02",
@@ -561,7 +561,7 @@ export const ratgeberB: Artikel[] = [
     h1: "Pflegedienst finden: Checkliste mit 10 Fragen für das Erstgespräch",
     metaTitle: "Pflegedienst finden in Hamburg: Checkliste & 10 Fragen",
     metaDescription:
-      "Guten Pflegedienst finden in Hamburg: wo Sie suchen, welche 10 Fragen Sie im Erstgespräch stellen und worauf Sie beim Pflegevertrag und bei Warnsignalen achten.",
+      "Guten Pflegedienst finden in Hamburg: wo Sie suchen, welche 10 Fragen Sie im Erstgespräch stellen und worauf Sie beim Pflegevertrag achten.",
     lead:
       "Die Wahl des Pflegedienstes ist eine Vertrauensfrage. Mit der richtigen Vorbereitung und zehn gezielten Fragen erkennen Sie schnell, ob ein Dienst zu Ihrer Familie passt.",
     veroeffentlicht: "2026-11-02",
@@ -859,7 +859,7 @@ export const ratgeberB: Artikel[] = [
     h1: "Behandlungspflege: Was zahlt die Krankenkasse?",
     metaTitle: "Behandlungspflege: Was zahlt die Krankenkasse? (2026)",
     metaDescription:
-      "Behandlungspflege nach § 37 SGB V: Die Krankenkasse zahlt bei ärztlicher Verordnung – auch ohne Pflegegrad. Leistungen, Genehmigung und Zuzahlung einfach erklärt.",
+      "Behandlungspflege nach § 37 SGB V: Die Krankenkasse zahlt bei ärztlicher Verordnung – auch ohne Pflegegrad. Leistungen und Zuzahlung erklärt.",
     lead:
       "Medikamente geben, Insulin spritzen, Wunden versorgen: Diese medizinische Pflege zu Hause bezahlt die Krankenkasse. Hier erfahren Sie, wie Sie Behandlungspflege bekommen und welche Kosten für Sie bleiben.",
     veroeffentlicht: "2026-11-02",
@@ -1126,7 +1126,7 @@ export const ratgeberB: Artikel[] = [
     h1: "Entlassung aus dem Krankenhaus: Checkliste für Angehörige",
     metaTitle: "Entlassung aus dem Krankenhaus: Checkliste für Angehörige",
     metaDescription:
-      "Entlassung aus dem Krankenhaus gut vorbereiten: Entlassmanagement, Verordnungen für 7 Tage, Medikamente, Pflegedienst und Pflegegrad im Eilverfahren – mit Checkliste.",
+      "Entlassung aus dem Krankenhaus vorbereiten: Entlassmanagement, Verordnungen, Medikamente, Pflegedienst und Pflegegrad im Eilverfahren – mit Checkliste.",
     lead:
       "Die Entlassung kommt oft schneller als gedacht. Mit dieser Checkliste wissen Sie, was das Krankenhaus organisieren muss, was Sie selbst klären sollten und wie die Pflege zu Hause nahtlos beginnt.",
     veroeffentlicht: "2026-11-02",

@@ -25,7 +25,7 @@ export default function FaqPage() {
       <PageHero
         crumbs={crumbs}
         h1="Häufige Fragen zur Pflege zu Hause"
-        lead="Die Antworten auf die Fragen, die uns Familien am häufigsten stellen. Ihre Frage ist nicht dabei? Rufen Sie uns an."
+        lead="Antworten auf die Fragen zur ambulanten Pflege, die uns Familien in Bergedorf am häufigsten stellen. Ihre Frage ist nicht dabei? Schreiben Sie uns."
       />
       <div className="wrap" style={{ maxWidth: 860, paddingBlock: "clamp(2.5rem, 6vw, 4.5rem)" }}>
         <ul className="chips-nav" aria-label="Themen">

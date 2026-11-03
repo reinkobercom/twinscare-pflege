@@ -7,7 +7,7 @@ import { PageHero, Sections, CtaBand, JsonLd, breadcrumbSchema, LinkCards } from
 export const metadata: Metadata = {
   title: "Über uns – TwinsCare ambulanter Pflegedienst Bergedorf",
   description:
-    "TwinsCare ist ein ambulanter Pflegedienst aus Bergedorf. Wir pflegen mit festen Teams, transparenten Kosten und Zeit für die Menschen – im Hamburger Osten und Umland.",
+    "TwinsCare ist ein ambulanter Pflegedienst aus Bergedorf – mit festen Teams, klaren Kosten und Zeit für die Menschen im Hamburger Osten.",
   alternates: { canonical: "/ueber-uns/" },
 };
 
@@ -62,7 +62,7 @@ export default function UeberUnsPage() {
       <PageHero
         crumbs={crumbs}
         h1="Ein Pflegedienst aus Bergedorf für den Hamburger Osten"
-        lead="Wir sind für Menschen da, die zu Hause gut versorgt bleiben möchten – und für die Familien, die sie dabei begleiten."
+        lead="Wir sind für Menschen im Hamburger Osten da, die zu Hause gut versorgt bleiben möchten – und für die Familien, die sie dabei begleiten."
         foto={{ id: "photo-1765896387398-1e1ae8d2eb85", alt: "Pflegekraft im Gespräch mit einer älteren Person im Sessel" }}
       />
       <div className="wrap content-layout" style={{ gridTemplateColumns: "minmax(0, 1fr)" }}>

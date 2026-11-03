@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { leistungsSeiten, getLeistung, getArtikel } from "@/lib/content";
-import { orte, site } from "@/lib/site";
+import { ogBild, orte, site } from "@/lib/site";
 import {
   PageHero, Kennzahlen, KurzBox, Sections, Toc, SideCard, FaqSection, LinkCards, QuellenListe, CtaBand,
   JsonLd, faqSchema, breadcrumbSchema,
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: l.metaTitle,
     description: l.metaDescription,
     alternates: { canonical: `/leistungen/${l.slug}/` },
-    openGraph: { title: l.metaTitle, description: l.metaDescription, url: `/leistungen/${l.slug}/` },
+    openGraph: { title: l.metaTitle, description: l.metaDescription, url: `/leistungen/${l.slug}/`, images: ogBild(l.foto) },
   };
 }
 

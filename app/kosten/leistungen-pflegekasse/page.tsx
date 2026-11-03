@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "Leistungen der Pflegekasse 2026: alle Beträge | TwinsCare",
   description:
-    "Alle Leistungen der Pflegeversicherung 2026 auf einen Blick: Pflegegeld, Sachleistung, Entlastungsbetrag, Tagespflege, Verhinderungspflege, Hilfsmittel und Zuschüsse.",
+    "Alle Leistungen der Pflegeversicherung 2026: Pflegegeld, Sachleistung, Entlastungsbetrag, Tagespflege, Verhinderungspflege und Zuschüsse.",
   alternates: { canonical: "/kosten/leistungen-pflegekasse/" },
 };
 

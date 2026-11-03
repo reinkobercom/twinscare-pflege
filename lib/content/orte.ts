@@ -236,7 +236,7 @@ export const ortSeiten: OrtSeite[] = [
   {
     slug: "lohbruegge",
     name: "Lohbrügge",
-    h1: "Pflegedienst für Lohbrügge – Pflege zu Hause von nebenan",
+    h1: "Pflegedienst für Lohbrügge – Pflege zu Hause",
     metaTitle: "Pflegedienst Lohbrügge – ambulante Pflege | TwinsCare",
     metaDescription:
       "TwinsCare pflegt in Lohbrügge, Boberg und Sande zu Hause. Büro an der Bergedorfer Straße, kostenlose Erstberatung, Abrechnung direkt mit der Pflegekasse.",
@@ -429,7 +429,7 @@ export const ortSeiten: OrtSeite[] = [
     h1: "Ambulante Pflege in Billstedt",
     metaTitle: "Pflegedienst Billstedt – ambulante Pflege | TwinsCare",
     metaDescription:
-      "Ambulanter Pflegedienst für Billstedt und Mümmelmannsberg: Pflege zu Hause, Beratung, Verhinderungspflege. Mit Infos zu Pflegestützpunkt und Seniorentreffs.",
+      "Ambulanter Pflegedienst für Billstedt und Mümmelmannsberg: Pflege zu Hause, Beratung, Verhinderungspflege – mit Infos zu Pflegestützpunkt und Treffs.",
     lead:
       "In Billstedt leben mehr als 13.000 Menschen, die 65 Jahre oder älter sind. TwinsCare pflegt sie zu Hause – in Mümmelmannsberg, in Schiffbek, am Öjendorfer Park und in allen anderen Teilen des Stadtteils.",
     plz: ["22111", "22113", "22115", "22117", "22119"],
@@ -1028,7 +1028,7 @@ export const ortSeiten: OrtSeite[] = [
     h1: "Pflegedienst für Oststeinbek und Havighorst",
     metaTitle: "Pflegedienst Oststeinbek – Pflege zu Hause | TwinsCare",
     metaDescription:
-      "Ambulante Pflege in Oststeinbek und Havighorst (22113): TwinsCare pflegt zu Hause. Warum der Pflegestützpunkt Kreis Stormarn zuständig ist und was Pflege kostet.",
+      "Ambulante Pflege in Oststeinbek und Havighorst (22113): TwinsCare pflegt zu Hause. Mit Infos zum Pflegestützpunkt Stormarn und zu den Kosten.",
     lead:
       "Oststeinbek hat eine Hamburger Postleitzahl, gehört aber zu Schleswig-Holstein. Das spielt bei der Pflegeberatung eine Rolle. TwinsCare pflegt in beiden Ortsteilen, Oststeinbek und Havighorst, und hilft Ihnen, die richtigen Stellen zu finden.",
     plz: ["22113"],
@@ -1217,7 +1217,7 @@ export const ortSeiten: OrtSeite[] = [
     h1: "Ambulante Pflege in Glinde",
     metaTitle: "Pflegedienst Glinde – ambulante Pflege | TwinsCare",
     metaDescription:
-      "TwinsCare pflegt in Glinde (21509) zu Hause. Pflegeberatung im Gutshaus, Seniorenbeirat, Kosten 2026 und Leistungen – alles für Angehörige in Glinde erklärt.",
+      "TwinsCare pflegt in Glinde (21509) zu Hause: Pflegeberatung im Gutshaus, Seniorenbeirat, Kosten 2026 und Leistungen – für Angehörige erklärt.",
     lead:
       "Glinde ist eine Stadt im Kreis Stormarn und grenzt an Hamburg. Für Pflegeberatung ist deshalb der Kreis zuständig, nicht Hamburg. Praktisch: Der Pflegestützpunkt Stormarn berät einmal im Monat direkt im Gutshaus Glinde – und TwinsCare kommt zu Ihnen nach Hause.",
     plz: ["21509"],

@@ -9,6 +9,7 @@ import { Phone, Close } from "./Icons";
 export default function RueckrufButton() {
   const ref = useRef<HTMLDialogElement>(null);
   const [sichtbar, setSichtbar] = useState(false);
+  const [offen, setOffen] = useState(false);
 
   useEffect(() => {
     // Ausblenden, solange das Rückruf-Formular im Abschluss sichtbar ist
@@ -32,8 +33,13 @@ export default function RueckrufButton() {
       <button
         type="button"
         className={`callback-fab${sichtbar ? " is-visible" : ""}`}
-        onClick={() => ref.current?.showModal()}
+        onClick={() => {
+          setOffen(true);
+          requestAnimationFrame(() => ref.current?.showModal());
+        }}
         aria-haspopup="dialog"
+        tabIndex={sichtbar ? 0 : -1}
+        aria-hidden={!sichtbar}
       >
         <Phone /> Rückruf anfordern
       </button>
@@ -42,11 +48,13 @@ export default function RueckrufButton() {
         className="callback-dialog"
         aria-label="Rückruf anfordern"
         onClick={(e) => e.target === ref.current && ref.current?.close()}
+        onClose={() => setOffen(false)}
       >
         <button type="button" className="dialog-close" onClick={() => ref.current?.close()} aria-label="Schließen">
           <Close width={22} height={22} />
         </button>
-        <RueckrufForm />
+        {/* Formular erst beim Öffnen rendern – vermeidet doppelte Überschriften und Feld-IDs auf der Seite */}
+        {offen && <RueckrufForm quelle="Rückruf-Button" />}
       </dialog>
     </>
   );

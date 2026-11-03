@@ -74,3 +74,9 @@ export const leistungen = [
     kasse: "Kranken- und Pflegekasse",
   },
 ] as const;
+
+// Vorschaubild für Social Media / Messenger: Foto der Seite (Unsplash, 1200×630) oder das Markenbild
+export const ogBild = (foto?: { id: string; alt: string }) =>
+  foto
+    ? [{ url: `https://images.unsplash.com/${foto.id}?auto=format&fit=crop&w=1200&h=630&q=80`, width: 1200, height: 630, alt: foto.alt }]
+    : [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "TwinsCare – Ambulanter Pflegedienst in Bergedorf" }];

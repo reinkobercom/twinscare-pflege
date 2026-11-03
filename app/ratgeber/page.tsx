@@ -4,7 +4,7 @@ import ArtikelGrid from "@/components/ArtikelGrid";
 import { PageHero, CtaBand, JsonLd, breadcrumbSchema } from "@/components/content";
 
 export const metadata: Metadata = {
-  title: "Pflege-Ratgeber für Angehörige | TwinsCare Bergedorf",
+  title: "Pflege-Ratgeber für Angehörige 2026 | TwinsCare",
   description:
     "Verständlich erklärt: Pflegegrad beantragen, Kosten des Pflegedienstes, Verhinderungspflege, Entlastungsbetrag und mehr. Mit aktuellen Beträgen für 2026.",
   alternates: { canonical: "/ratgeber/" },
@@ -19,7 +19,7 @@ export default function RatgeberHub() {
       <PageHero
         crumbs={crumbs}
         h1="Ratgeber Pflege: verständlich erklärt"
-        lead="Antworten auf die Fragen, die Angehörige uns am häufigsten stellen – mit den aktuellen Beträgen der Pflegeversicherung für 2026."
+        lead="Antworten auf die Fragen, die Angehörige uns am häufigsten stellen – verständlich erklärt und mit den aktuellen Beträgen der Pflegeversicherung für 2026."
         ctas={false}
       />
       <section className="section">

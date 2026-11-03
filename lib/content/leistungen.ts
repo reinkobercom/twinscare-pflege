@@ -20,10 +20,10 @@ export const leistungsSeiten: LeistungSeite[] = [
   {
     slug: "ambulante-pflege",
     navTitle: "Ambulante Pflege",
-    h1: "Ambulante Pflege in Hamburg-Bergedorf und Umgebung",
+    h1: "Ambulante Pflege in Hamburg-Bergedorf",
     metaTitle: "Ambulante Pflege in Bergedorf | TwinsCare Pflegedienst",
     metaDescription:
-      "Ambulante Pflege zu Hause in Bergedorf und Hamburg-Ost: Grundpflege nach SGB XI, bis 2.299 € Pflegesachleistung im Monat. Kostenlose Erstberatung bei Ihnen.",
+      "Ambulante Pflege zu Hause in Bergedorf und Hamburg-Ost: Grundpflege nach SGB XI, bis 2.299 € Sachleistung im Monat. Kostenlose Erstberatung.",
     lead:
       "TwinsCare unterstützt Sie zu Hause bei Körperpflege, Ernährung und Mobilität. Die Kosten übernimmt ab Pflegegrad 2 die Pflegekasse über die Pflegesachleistung.",
     kurz: [
@@ -1283,7 +1283,7 @@ export const leistungsSeiten: LeistungSeite[] = [
     h1: "Pflege nach dem Krankenhausaufenthalt in Hamburg-Bergedorf",
     metaTitle: "Pflege nach dem Krankenhaus in Bergedorf | TwinsCare",
     metaDescription:
-      "Pflege nach dem Krankenhaus in Bergedorf und Hamburg-Ost: Entlassmanagement, Behandlungspflege und Grundpflege zu Hause. TwinsCare plant den Übergang mit Ihnen.",
+      "Pflege nach dem Krankenhaus in Bergedorf und Hamburg-Ost: Entlassmanagement, Behandlungs- und Grundpflege zu Hause – wir planen den Übergang.",
     lead:
       "Nach einem Krankenhausaufenthalt ist der Weg nach Hause oft der schwierigste Teil. TwinsCare übernimmt Behandlungspflege und Grundpflege, damit Sie oder Ihr Angehöriger sicher zu Hause ankommen.",
     kurz: [

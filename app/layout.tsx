@@ -12,11 +12,11 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: {
-    default: "Pflegedienst Bergedorf & Hamburg-Ost | TwinsCare ambulante Pflege",
+    default: "Ambulanter Pflegedienst Bergedorf | TwinsCare",
     template: "%s",
   },
   description:
-    "Ambulanter Pflegedienst in Bergedorf, Lohbrügge, Billstedt, Horn, Jenfeld, Oststeinbek, Glinde, Reinbek und Wentorf. Kostenlose Erstberatung zu Hause, Abrechnung direkt mit der Pflegekasse.",
+    "Ambulanter Pflegedienst in Bergedorf und dem Hamburger Osten: Grundpflege, Behandlungspflege, Verhinderungspflege. Kostenlose Erstberatung zu Hause.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

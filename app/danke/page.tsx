@@ -6,6 +6,7 @@ import { Check, Phone } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Danke für Ihre Anfrage | TwinsCare",
+  description: "Danke für Ihre Anfrage bei TwinsCare. Wir melden uns bei Ihnen und besprechen gemeinsam die nächsten Schritte.",
   robots: { index: false, follow: true },
 };
 

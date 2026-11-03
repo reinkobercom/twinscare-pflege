@@ -76,7 +76,7 @@ export const ratgeberA: Artikel[] = [
     h1: "Was kostet ein ambulanter Pflegedienst? Kosten, Kassenanteil und Eigenanteil 2026",
     metaTitle: "Was kostet ein Pflegedienst? Kosten 2026 in Hamburg",
     metaDescription:
-      "Was kostet ein ambulanter Pflegedienst? So entstehen die Preise, was die Pflegekasse 2026 zahlt und wie hoch Ihr Eigenanteil ist – mit Rechenbeispiel für PG 3.",
+      "Was kostet ein ambulanter Pflegedienst? So entstehen die Preise, was die Pflegekasse 2026 zahlt und wie hoch Ihr Eigenanteil ist – mit Rechenbeispiel.",
     lead:
       "Die Kosten eines Pflegedienstes hängen davon ab, wie oft er kommt und was er tut. Ab Pflegegrad 2 übernimmt die Pflegekasse einen festen Monatsbetrag – wir zeigen, wie die Rechnung entsteht und was für Sie übrig bleibt.",
     veroeffentlicht: DATUM,
@@ -327,7 +327,7 @@ export const ratgeberA: Artikel[] = [
     h1: "Was kostet einmal Duschen vom Pflegedienst?",
     metaTitle: "Duschen vom Pflegedienst: Kosten und Kassenanteil",
     metaDescription:
-      "Was kostet einmal Duschen beim Pflegedienst? Wie der Preis entsteht, was die Pflegekasse ab Pflegegrad 1 zahlt und wann Sie selbst zahlen – einfach erklärt.",
+      "Was kostet einmal Duschen beim Pflegedienst? Wie der Preis entsteht, was die Pflegekasse zahlt und wann Sie selbst zahlen – einfach erklärt.",
     lead:
       "Hilfe beim Duschen ist einer der häufigsten Gründe, einen Pflegedienst zu holen. Was ein Einsatz kostet und wer ihn bezahlt, hängt vor allem von Ihrem Pflegegrad ab.",
     veroeffentlicht: DATUM,
@@ -345,7 +345,7 @@ export const ratgeberA: Artikel[] = [
     },
     sections: [
       {
-        h2: "Was kostet einmal Duschen vom Pflegedienst?",
+        h2: "Wie viel kostet die Hilfe beim Duschen im Einzelnen?",
         blocks: [
           {
             type: "p",
@@ -597,7 +597,7 @@ export const ratgeberA: Artikel[] = [
     h1: "Pflegesachleistung, Pflegegeld oder Kombinationsleistung – was passt zu Ihnen?",
     metaTitle: "Pflegesachleistung oder Pflegegeld? Kombi 2026",
     metaDescription:
-      "Pflegesachleistung, Pflegegeld oder beides? Unterschiede, Beträge 2026 und ein Rechenbeispiel zur Kombinationsleistung – so nutzen Sie Ihren Pflegegrad gut.",
+      "Pflegesachleistung, Pflegegeld oder beides? Unterschiede, Beträge 2026 und ein Rechenbeispiel zur Kombinationsleistung – einfach erklärt.",
     lead:
       "Ab Pflegegrad 2 können Sie wählen: Geld für die Pflege durch Angehörige, Sachleistung für einen Pflegedienst – oder eine Mischung aus beidem. Wir erklären die Unterschiede und rechnen die Kombination Schritt für Schritt vor.",
     veroeffentlicht: DATUM,
@@ -861,7 +861,7 @@ export const ratgeberA: Artikel[] = [
     h1: "Pflegegrad beantragen in Hamburg: Schritt für Schritt zum Bescheid",
     metaTitle: "Pflegegrad beantragen in Hamburg: So geht's 2026",
     metaDescription:
-      "Pflegegrad beantragen in Hamburg: Antrag bei der Pflegekasse, MD-Begutachtung, Fristen und Widerspruch – plus kostenlose Hilfe vom Pflegestützpunkt Bergedorf.",
+      "Pflegegrad beantragen in Hamburg: Antrag bei der Pflegekasse, MD-Begutachtung, Fristen und Widerspruch – plus kostenlose Hilfe in Bergedorf.",
     lead:
       "Ein Pflegegrad ist der Schlüssel zu allen Leistungen der Pflegeversicherung. Der Antrag ist einfacher, als viele denken – ein Anruf bei der Pflegekasse genügt für den Start.",
     veroeffentlicht: DATUM,
@@ -1128,9 +1128,9 @@ export const ratgeberA: Artikel[] = [
     slug: "md-begutachtung-vorbereiten",
     cluster: "pflegegrad",
     h1: "MD-Begutachtung vorbereiten: Module, Pflegetagebuch und Checkliste",
-    metaTitle: "MD-Begutachtung vorbereiten: Tipps und Checkliste",
+    metaTitle: "MD-Begutachtung vorbereiten: Module und Checkliste",
     metaDescription:
-      "MD-Begutachtung vorbereiten: die 6 Module mit Gewichtung, Punkte je Pflegegrad, Pflegetagebuch, Unterlagen-Checkliste und warum Angehörige dabei sein sollten.",
+      "MD-Begutachtung vorbereiten: die 6 Module mit Gewichtung, Punkte je Pflegegrad, Pflegetagebuch und Checkliste für die Unterlagen.",
     lead:
       "Beim Besuch des Medizinischen Dienstes entscheidet sich, welchen Pflegegrad die Pflegekasse vergibt. Wer weiß, worauf der Gutachter achtet, kann den Alltag realistischer schildern.",
     veroeffentlicht: DATUM,
@@ -1403,7 +1403,7 @@ export const ratgeberA: Artikel[] = [
     h1: "Pflegegrad 1 bis 5: alle Leistungen im Überblick (2026)",
     metaTitle: "Pflegegrade 1–5: Alle Leistungen 2026 im Überblick",
     metaDescription:
-      "Pflegegrad 1 bis 5: Pflegegeld, Sachleistung, Entlastungsbetrag, Tagespflege und Jahresbetrag 2026 in einer Tabelle – plus Punkte und was Pflegegrad 1 bringt.",
+      "Pflegegrad 1 bis 5: Pflegegeld, Sachleistung, Entlastungsbetrag, Tagespflege und Jahresbetrag 2026 in einer Tabelle – plus Punkte je Pflegegrad.",
     lead:
       "Welche Leistungen Ihnen zustehen, hängt vom Pflegegrad ab. Hier finden Sie alle wichtigen Beträge 2026 auf einen Blick – und Erklärungen, wie Sie sie sinnvoll nutzen.",
     veroeffentlicht: DATUM,

@@ -3,7 +3,9 @@ import { site } from "@/lib/site";
 import { Breadcrumbs } from "@/components/content";
 
 export const metadata: Metadata = {
-  title: "Barrierefreiheit | TwinsCare",
+  title: "Erklärung zur Barrierefreiheit | TwinsCare Pflegedienst",
+  description:
+    "Erklärung zur Barrierefreiheit der Website von TwinsCare: Stand der Umsetzung, bekannte Einschränkungen und wie Sie uns Barrieren melden.",
   alternates: { canonical: "/barrierefreiheit/" },
 };
 

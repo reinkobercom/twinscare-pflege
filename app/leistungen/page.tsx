@@ -4,9 +4,9 @@ import Photo from "@/components/Photo";
 import { PageHero, CtaBand, JsonLd, breadcrumbSchema, Blocks } from "@/components/content";
 
 export const metadata: Metadata = {
-  title: "Leistungen: ambulante Pflege in Bergedorf & Hamburg-Ost | TwinsCare",
+  title: "Leistungen ambulanter Pflegedienst Bergedorf | TwinsCare",
   description:
-    "Ambulante Pflege, Behandlungspflege, Verhinderungspflege, Entlastung und Pflegeberatung in Bergedorf, Billstedt, Reinbek und Umgebung. Abrechnung direkt mit der Kasse.",
+    "Ambulante Pflege, Behandlungspflege, Verhinderungspflege, Entlastung und Pflegeberatung in Bergedorf und Umgebung – direkt mit der Kasse abgerechnet.",
   alternates: { canonical: "/leistungen/" },
 };
 
@@ -18,8 +18,8 @@ export default function LeistungenHub() {
       <JsonLd data={{ "@context": "https://schema.org", ...breadcrumbSchema(crumbs) }} />
       <PageHero
         crumbs={crumbs}
-        h1="Unsere Leistungen für Pflege zu Hause"
-        lead="Von der täglichen Körperpflege über medizinische Behandlungspflege bis zur Beratung beim Pflegegrad. Wir rechnen direkt mit Pflege- und Krankenkasse ab."
+        h1="Leistungen für die Pflege zu Hause"
+        lead="Von der täglichen Körperpflege über medizinische Behandlungspflege bis zur Beratung beim Pflegegrad – Ihr ambulanter Pflegedienst in Bergedorf und Umgebung. Wir rechnen direkt mit Pflege- und Krankenkasse ab."
       />
       <section className="section">
         <div className="wrap">
@@ -27,7 +27,7 @@ export default function LeistungenHub() {
             {leistungsSeiten.map((l) => (
               <a key={l.slug} className="card" href={`/leistungen/${l.slug}/`}>
                 <div className="card-photo">
-                  <Photo id={l.foto.id} alt="" sizes="(max-width: 600px) 100vw, 33vw" />
+                  <Photo id={l.foto.id} alt={l.foto.alt} sizes="(max-width: 600px) 100vw, 33vw" />
                 </div>
                 <div className="card-body">
                   <span className="card-meta">{l.kennzahlen[0]?.wert}</span>

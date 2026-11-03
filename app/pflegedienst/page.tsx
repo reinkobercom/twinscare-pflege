@@ -5,9 +5,9 @@ import PlzCheck from "@/components/PlzCheck";
 import { PageHero, CtaBand, JsonLd, breadcrumbSchema } from "@/components/content";
 
 export const metadata: Metadata = {
-  title: "Einsatzgebiet: Pflegedienst in Bergedorf & Umgebung | TwinsCare",
+  title: "Einsatzgebiet Pflegedienst Bergedorf & Umgebung | TwinsCare",
   description:
-    "TwinsCare versorgt Bergedorf, Lohbrügge, Billstedt, Horn, Jenfeld, Oststeinbek, Glinde, Reinbek und Wentorf. Prüfen Sie Ihre Postleitzahl und finden Sie Ihre Ansprechpartnerin.",
+    "TwinsCare versorgt Bergedorf, Lohbrügge, Billstedt, Horn, Jenfeld, Oststeinbek, Glinde, Reinbek und Wentorf. Jetzt Postleitzahl prüfen.",
   alternates: { canonical: "/pflegedienst/" },
 };
 
@@ -23,7 +23,7 @@ export default function EinsatzgebietHub() {
       <PageHero
         crumbs={crumbs}
         h1="Unser Einsatzgebiet rund um Bergedorf"
-        lead="Kurze Wege bedeuten mehr Zeit für Sie. Deshalb versorgen wir neun Orte im Hamburger Osten und im direkten Umland – vom Büro in der Bergedorfer Straße aus."
+        lead="Kurze Wege bedeuten mehr Zeit für Sie. Deshalb versorgen wir Bergedorf und Umgebung: neun Orte im Hamburger Osten und im direkten Umland – vom Büro in der Bergedorfer Straße aus."
       />
       <section className="section">
         <div className="wrap area">

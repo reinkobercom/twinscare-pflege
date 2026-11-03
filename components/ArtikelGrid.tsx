@@ -9,7 +9,7 @@ export default function ArtikelGrid({ items, headingLevel = "h2" }: { items: Art
       {items.map((a) => (
         <a key={a.slug} className="card" href={`/ratgeber/${a.slug}/`}>
           <div className="card-photo">
-            <Photo id={a.foto.id} alt="" sizes="(max-width: 600px) 100vw, 33vw" />
+            <Photo id={a.foto.id} alt={a.foto.alt} sizes="(max-width: 600px) 100vw, 33vw" />
           </div>
           <div className="card-body">
             <span className="card-meta">

@@ -71,8 +71,8 @@ export default function Startseite() {
               )}
               <h1>Ambulanter Pflegedienst in Bergedorf und dem Hamburger Osten</h1>
               <p className="hero-lead">
-                Ambulante Pflege, Behandlungspflege und Entlastung für Ihre Familie – von Menschen, die ihren Stadtteil
-                kennen.
+                Ambulante Pflege, Behandlungspflege und Entlastung für Ihre Familie im Hamburger Osten – von Menschen, die
+                ihren Stadtteil kennen.
               </p>
               <div className="hero-ctas">
                 <a className="btn btn-primary" href="/pflege-anfragen/">
@@ -387,7 +387,7 @@ export default function Startseite() {
         {/* Abschluss */}
         <section className="section closing" aria-labelledby="abschluss-titel">
           <div className="closing-bg" aria-hidden>
-            <Photo id="photo-1761839257513-a921710a4291" alt="" />
+            <Photo id="photo-1761839257513-a921710a4291" alt="Zwei Frauen betrachten gemeinsam Blumen in einem Garten" />
           </div>
           <div className="wrap closing-grid">
             <div>

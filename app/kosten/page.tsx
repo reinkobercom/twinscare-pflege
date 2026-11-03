@@ -6,9 +6,9 @@ import {
 } from "@/components/content";
 
 export const metadata: Metadata = {
-  title: "Kosten ambulante Pflege 2026: Was zahlt die Kasse? | TwinsCare",
+  title: "Kosten ambulante Pflege 2026: Was zahlt die Kasse?",
   description:
-    "Was kostet ein Pflegedienst und was übernehmen Pflege- und Krankenkasse? Alle Beträge 2026, Rechenbeispiele und Eigenanteil – erklärt von TwinsCare aus Bergedorf.",
+    "Was kostet ein Pflegedienst und was zahlen Pflege- und Krankenkasse? Alle Beträge 2026, Rechenbeispiele und Eigenanteil – verständlich erklärt.",
   alternates: { canonical: "/kosten/" },
 };
 

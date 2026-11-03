@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Check } from "./Icons";
 import { sendeAnfrage, fehlertext } from "@/lib/lead";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
-export default function RueckrufForm() {
+export default function RueckrufForm({ quelle = "Rückruf-Formular" }: { quelle?: string }) {
+  const uid = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
@@ -16,7 +17,7 @@ export default function RueckrufForm() {
     setStatus("sending");
     setError("");
     try {
-      await sendeAnfrage({ ...data, typ: "rueckruf", quelle: `Rückruf-Formular (${window.location.pathname})` });
+      await sendeAnfrage({ ...data, typ: "rueckruf", quelle: `${quelle} (${window.location.pathname})` });
       setStatus("sent");
     } catch (err) {
       setStatus("error");
@@ -40,12 +41,12 @@ export default function RueckrufForm() {
       <p>Wir rufen Sie zurück und besprechen alles Weitere – kostenlos und unverbindlich.</p>
 
       <div className="field">
-        <label htmlFor="rr-name">Ihr Name</label>
-        <input id="rr-name" name="name" type="text" autoComplete="name" required />
+        <label htmlFor={`${uid}-name`}>Ihr Name</label>
+        <input id={`${uid}-name`} name="name" type="text" autoComplete="name" required />
       </div>
       <div className="field">
-        <label htmlFor="rr-tel">Telefonnummer</label>
-        <input id="rr-tel" name="telefon" type="tel" autoComplete="tel" inputMode="tel" required />
+        <label htmlFor={`${uid}-tel`}>Telefonnummer</label>
+        <input id={`${uid}-tel`} name="telefon" type="tel" autoComplete="tel" inputMode="tel" required />
       </div>
       <fieldset className="field">
         <legend>Wann passt es Ihnen?</legend>

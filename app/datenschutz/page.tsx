@@ -191,10 +191,10 @@ export default function DatenschutzPage() {
             </tr>
           </thead>
           <tbody>
-            <tr><th scope="row">twinscare-consent</th><td>TwinsCare</td><td>Speichert Ihre Cookie-Auswahl</td><td>12 Monate</td></tr>
-            <tr><th scope="row">_ga, _ga_*</th><td>Google</td><td>Unterscheidet Besucher für Google Analytics</td><td>2 Jahre</td></tr>
-            <tr><th scope="row">_gcl_au, _gcl_*</th><td>Google</td><td>Conversion-Messung für Google Ads</td><td>90 Tage</td></tr>
-            <tr><th scope="row">_fbp, _fbc</th><td>Meta</td><td>Zuordnung von Besuchen und Anzeigenklicks für den Meta Pixel</td><td>90 Tage</td></tr>
+            <tr><th scope="row">twinscare-consent</th><td data-label="Anbieter">TwinsCare</td><td data-label="Zweck">Speichert Ihre Cookie-Auswahl</td><td data-label="Dauer">12 Monate</td></tr>
+            <tr><th scope="row">_ga, _ga_*</th><td data-label="Anbieter">Google</td><td data-label="Zweck">Unterscheidet Besucher für Google Analytics</td><td data-label="Dauer">2 Jahre</td></tr>
+            <tr><th scope="row">_gcl_au, _gcl_*</th><td data-label="Anbieter">Google</td><td data-label="Zweck">Conversion-Messung für Google Ads</td><td data-label="Dauer">90 Tage</td></tr>
+            <tr><th scope="row">_fbp, _fbc</th><td data-label="Anbieter">Meta</td><td data-label="Zweck">Zuordnung von Besuchen und Anzeigenklicks für den Meta Pixel</td><td data-label="Dauer">90 Tage</td></tr>
           </tbody>
         </table>
       </div>

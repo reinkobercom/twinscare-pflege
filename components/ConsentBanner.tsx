@@ -53,9 +53,9 @@ export default function ConsentBanner() {
   };
 
   return (
-    <div className="consent" role="dialog" aria-modal="false" aria-labelledby="consent-titel">
-      <div className="consent-inner">
-        <h2 id="consent-titel">Ihre Privatsphäre</h2>
+    <div className="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-titel">
+      <div className="cookie-inner">
+        <h2 id="cookie-titel">Ihre Privatsphäre</h2>
         <p>
           Wir möchten mit Ihrer Einwilligung messen, wie unsere Website genutzt wird
           {hatMarketing ? ", und den Erfolg unserer Anzeigen bei Google und Meta auswerten sowie Anzeigen für Besucher dieser Website ausspielen (Remarketing)" : ""}
@@ -64,8 +64,8 @@ export default function ConsentBanner() {
         </p>
 
         {details && (
-          <div className="consent-optionen">
-            <label className="consent-opt">
+          <div className="cookie-optionen">
+            <label className="cookie-opt">
               <input type="checkbox" checked disabled />
               <span>
                 <strong>Notwendig</strong>
@@ -73,7 +73,7 @@ export default function ConsentBanner() {
               </span>
             </label>
             {hatStatistik && (
-              <label className="consent-opt">
+              <label className="cookie-opt">
                 <input type="checkbox" checked={statistik} onChange={(e) => setStatistik(e.target.checked)} />
                 <span>
                   <strong>Statistik</strong>
@@ -82,7 +82,7 @@ export default function ConsentBanner() {
               </label>
             )}
             {hatMarketing && (
-              <label className="consent-opt">
+              <label className="cookie-opt">
                 <input type="checkbox" checked={marketing} onChange={(e) => setMarketing(e.target.checked)} />
                 <span>
                   <strong>Marketing</strong>
@@ -93,8 +93,8 @@ export default function ConsentBanner() {
           </div>
         )}
 
-        <div className="consent-actions">
-          <button type="button" className="btn btn-primary" onClick={() => speichern(hatStatistik, hatMarketing)}>
+        <div className="cookie-actions">
+          <button type="button" className="btn btn-primary" autoFocus onClick={() => speichern(hatStatistik, hatMarketing)}>
             Alle akzeptieren
           </button>
           <button type="button" className="btn btn-primary" onClick={() => speichern(false, false)}>

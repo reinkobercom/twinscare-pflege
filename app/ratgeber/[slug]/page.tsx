@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { artikel, getArtikel, getLeistung, clusterInfo } from "@/lib/content";
-import { site } from "@/lib/site";
+import { ogBild, site } from "@/lib/site";
 import {
   PageHero, KurzBox, Sections, Toc, SideCard, FaqSection, LinkCards, QuellenListe, CtaBand,
   JsonLd, faqSchema, breadcrumbSchema,
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/ratgeber/${a.slug}/`,
       publishedTime: a.veroeffentlicht,
       modifiedTime: a.aktualisiert,
+      images: ogBild(a.foto),
     },
   };
 }

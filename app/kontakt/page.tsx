@@ -22,7 +22,7 @@ export default function KontaktPage() {
         <div className="funnel-layout">
           <div>
             <h1>Kontakt</h1>
-            <p className="page-lead">Rufen Sie an, schreiben Sie uns oder kommen Sie vorbei. Wir nehmen uns Zeit für Ihre Fragen.</p>
+            <p className="page-lead">Schreiben Sie uns, fordern Sie einen Rückruf an oder kommen Sie vorbei. Wir nehmen uns Zeit für Ihre Fragen.</p>
             <ul className="contact-list">
               {site.phoneHref && (
                 <li>

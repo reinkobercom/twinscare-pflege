@@ -7,9 +7,9 @@ import {
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pflegegrad-Rechner 2026: kostenlos Pflegegrad ermitteln | TwinsCare",
+  title: "Pflegegrad-Rechner 2026: Pflegegrad kostenlos ermitteln",
   description:
-    "Mit dem Pflegegrad-Rechner in 3 Minuten eine erste Einschätzung erhalten – nach den sechs Modulen der Begutachtung. Inklusive Pflegegeld und Sachleistung 2026.",
+    "In 3 Minuten eine erste Einschätzung zum Pflegegrad – nach den sechs Modulen der Begutachtung, mit Pflegegeld und Sachleistung 2026.",
   alternates: { canonical: "/pflegegrad-rechner/" },
 };
 
@@ -133,7 +133,7 @@ export default function RechnerPage() {
             <div className="check-copy">
               <h1>Pflegegrad-Rechner 2026</h1>
               <p className="page-lead">
-                Zwölf Fragen zu den Lebensbereichen, die auch der Medizinische Dienst prüft. Danach wissen Sie, welcher
+                Ermitteln Sie mit zwölf Fragen zu den Lebensbereichen, die auch der Medizinische Dienst prüft, welcher
                 Pflegegrad möglich ist und welche Leistungen Ihnen zustehen.
               </p>
               <ul>

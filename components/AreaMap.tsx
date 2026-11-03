@@ -14,7 +14,7 @@ const sitz = { x: 284, y: 330 };
 export default function AreaMap() {
   return (
     <figure className="area-map">
-      <svg viewBox="0 0 500 410" role="img" aria-labelledby="map-title">
+      <svg viewBox="0 0 500 410" role="group" aria-labelledby="map-title">
         <title id="map-title">Einsatzgebiet von TwinsCare rund um Bergedorf</title>
         <defs>
           <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">

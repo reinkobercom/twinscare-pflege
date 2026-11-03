@@ -26,3 +26,18 @@ npm run dev
 ## Unternehmensdaten
 Telefon, WhatsApp, E-Mail und Öffnungszeiten stehen zentral in `lib/site.ts`.
 Werte mit `TODO` vor dem Livegang ersetzen – nur die Tracking-Nummern verwenden.
+
+## Tracking und Cookie-Banner
+Google Analytics 4, Google Ads und Meta Pixel laden nur, wenn ihre ID gesetzt ist **und** der Besucher im Cookie-Banner zustimmt
+(`lib/tracking.ts`, `components/ConsentBanner.tsx`). Ohne gesetzte IDs erscheint kein Banner.
+Bei Anfragen geht nur das Ereignis „Lead“ an Google/Meta – keine Formularinhalte, kein Advanced Matching, keine Enhanced Conversions.
+
+| Variable | Beispiel |
+| --- | --- |
+| `NEXT_PUBLIC_GA4_ID` | `G-XXXXXXXXXX` |
+| `NEXT_PUBLIC_GOOGLE_ADS_ID` | `AW-123456789` |
+| `NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL` | Conversion-Label der Aktion „Lead“ |
+| `NEXT_PUBLIC_META_PIXEL_ID` | `1234567890` |
+
+`NEXT_PUBLIC_*`-Werte werden beim Build eingesetzt – nach dem Eintragen neu deployen.
+Vercel Web Analytics läuft cookielos ohne Einwilligung; im Vercel-Projekt unter „Analytics“ aktivieren.

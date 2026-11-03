@@ -1,4 +1,6 @@
-// Schickt eine Anfrage an /api/anfrage und meldet eine erfolgreiche Anfrage an Google Tag Manager / Ads.
+import { trackeLead } from "./tracking";
+
+// Schickt eine Anfrage an /api/anfrage und meldet eine erfolgreiche Anfrage an die eingewilligten Tracking-Dienste.
 export async function sendeAnfrage(daten: Record<string, unknown>): Promise<void> {
   const res = await fetch("/api/anfrage", {
     method: "POST",
@@ -8,10 +10,8 @@ export async function sendeAnfrage(daten: Record<string, unknown>): Promise<void
   const json = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(json.error || "Die Nachricht wurde nicht gesendet. Bitte rufen Sie uns direkt an.");
 
-  // Conversion-Ereignis für das Tracking (Vertrag § 7a)
-  const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
-  w.dataLayer = w.dataLayer || [];
-  w.dataLayer.push({ event: "lead", lead_typ: daten.typ });
+  // Conversion-Ereignis (Vertrag § 7a) – nur „Lead“, keine Formularinhalte
+  trackeLead();
 }
 
 export function fehlertext(err: unknown) {

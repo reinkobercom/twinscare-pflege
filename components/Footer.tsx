@@ -1,5 +1,6 @@
 import { site, orte, leistungen } from "@/lib/site";
 import { Heart } from "./Icons";
+import CookieLink from "./CookieLink";
 
 export default function Footer() {
   return (
@@ -78,6 +79,7 @@ export default function Footer() {
             <li><a href="/impressum/">Impressum</a></li>
             <li><a href="/datenschutz/">Datenschutz</a></li>
             <li><a href="/barrierefreiheit/">Barrierefreiheit</a></li>
+            <CookieLink />
           </ul>
         </div>
       </div>

@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ActionBar from "@/components/ActionBar";
 import RueckrufButton from "@/components/RueckrufButton";
+import ConsentBanner from "@/components/ConsentBanner";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
@@ -42,6 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <RueckrufButton />
         <ActionBar />
+        <ConsentBanner />
+        {/* Vercel Web Analytics: cookielos, ohne Einwilligung (Art. 6 Abs. 1 lit. f DSGVO) */}
+        <Analytics />
       </body>
     </html>
   );

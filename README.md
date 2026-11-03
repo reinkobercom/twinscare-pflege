@@ -20,7 +20,7 @@ npm run dev
 | Variable | Beispiel |
 | --- | --- |
 | `RESEND_API_KEY` | `re_…` |
-| `MAIL_FROM` | `Twinscare Pflegedienst - VALIORA <leads@reinkober-leadportal.com>` (Domain in Resend verifiziert) |
+| `MAIL_FROM` | `VALIORA - Marketing für Pflegeunternehmen <leads@reinkober-leadportal.com>` (Domain in Resend verifiziert) |
 | `MAIL_TO` | `leads@reinkober.agency,info@twinscare-pflegedienst.de` |
 
 ## Unternehmensdaten

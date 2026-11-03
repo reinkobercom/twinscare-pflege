@@ -4,7 +4,7 @@ import { Resend } from "resend";
 // Eine Route für alle Anfragen der Website (Rückruf, Pflegegrad-Rechner, später Anfrage-Funnel).
 // Benötigte Umgebungsvariablen in Vercel:
 // RESEND_API_KEY  – API-Key aus Resend
-// MAIL_FROM       – verifizierter Absender: "Twinscare Pflegedienst - VALIORA <leads@reinkober-leadportal.com>"
+// MAIL_FROM       – verifizierter Absender: "VALIORA - Marketing für Pflegeunternehmen <leads@reinkober-leadportal.com>"
 // MAIL_TO         – Empfänger, mit Komma getrennt: leads@reinkober.agency,info@twinscare-pflegedienst.de
 
 const esc = (s: string) =>

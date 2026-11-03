@@ -1439,7 +1439,8 @@ fieldset.field {
 @media (max-width: 760px) {
   .action-bar {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.3fr;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
     gap: 0.5rem;
     position: fixed;
     left: 0;

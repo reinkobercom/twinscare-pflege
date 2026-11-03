@@ -10,7 +10,7 @@ export function GET() {
 
 > TwinsCare (${site.legalName}) ist ein ambulanter Pflegedienst mit Sitz in der ${site.street}, ${site.zip} ${site.city}-Bergedorf. Einsatzgebiet: ${orte.map((o) => o.name).join(", ")}. Leistungen: ambulante Pflege (Grundpflege nach SGB XI), Behandlungspflege (SGB V), Verhinderungspflege, Entlastungsleistungen, Pflegeberatung inklusive Beratungseinsatz nach § 37 Abs. 3 SGB XI und Pflege nach dem Krankenhaus. Erstberatung zu Hause kostenlos, Abrechnung direkt mit Pflege- und Krankenkasse.
 
-Kontakt: ${site.phoneDisplay} · ${site.email} · ${u("/pflege-anfragen/")}
+Kontakt: ${[site.phoneDisplay, site.email, u("/pflege-anfragen/")].filter(Boolean).join(" · ")}
 
 ## Leistungen
 ${leistungsSeiten.map((l) => `- [${l.navTitle}](${u(`/leistungen/${l.slug}/`)}): ${l.metaDescription}`).join("\n")}

@@ -206,9 +206,11 @@ export function PageHero({
                 <a className="btn btn-primary" href="/pflege-anfragen/">
                   Kostenlose Beratung anfragen
                 </a>
-                <a className="btn btn-call" href={site.phoneHref}>
+                {site.phoneHref && (
+                  <a className="btn btn-call" href={site.phoneHref}>
                   <Phone /> {site.phoneDisplay}
                 </a>
+                )}
               </div>
             )}
             {children}
@@ -311,9 +313,11 @@ export function InlineCta({ text }: { text?: string }) {
         <a className="btn btn-primary" href="/pflege-anfragen/">
           Beratung anfragen
         </a>
-        <a className="btn btn-call" href={site.phoneHref}>
+        {site.phoneHref && (
+          <a className="btn btn-call" href={site.phoneHref}>
           <Phone /> Anrufen
         </a>
+        )}
       </div>
     </aside>
   );
@@ -334,9 +338,11 @@ export function CtaBand({ title = "Lassen Sie uns sprechen", text }: { title?: s
           <a className="btn btn-light" href="/pflege-anfragen/">
             Kostenlose Beratung anfragen
           </a>
-          <a className="btn btn-call" href={site.phoneHref}>
+          {site.phoneHref && (
+            <a className="btn btn-call" href={site.phoneHref}>
             <Phone /> {site.phoneDisplay}
           </a>
+          )}
         </div>
       </div>
     </section>
@@ -351,9 +357,11 @@ export function SideCard() {
       <a className="btn btn-primary" href="/pflege-anfragen/">
         Beratung anfragen
       </a>
-      <a className="btn btn-call" href={site.phoneHref}>
+      {site.phoneHref && (
+        <a className="btn btn-call" href={site.phoneHref}>
         <Phone /> {site.phoneDisplay}
       </a>
+      )}
     </aside>
   );
 }

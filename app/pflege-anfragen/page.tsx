@@ -25,12 +25,14 @@ export default function AnfragePage() {
               <li><Check /> Schriftlicher Kostenvoranschlag vor dem Start</li>
               <li><Check /> Anträge erledigen wir gemeinsam mit Ihnen</li>
             </ul>
-            <div className="funnel-call">
-              <span>Lieber direkt sprechen?</span>
-              <a className="btn btn-call" href={site.phoneHref}>
-                <Phone /> {site.phoneDisplay}
-              </a>
-            </div>
+            {site.phoneHref && (
+              <div className="funnel-call">
+                <span>Lieber direkt sprechen?</span>
+                <a className="btn btn-call" href={site.phoneHref}>
+                  <Phone /> {site.phoneDisplay}
+                </a>
+              </div>
+            )}
           </div>
           <AnfrageFunnel />
         </div>

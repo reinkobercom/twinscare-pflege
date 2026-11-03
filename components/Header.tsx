@@ -42,10 +42,12 @@ export default function Header() {
           </ul>
         </nav>
         <div className="header-actions">
-          <a className="header-phone" href={site.phoneHref} aria-label={`Anrufen: ${site.phoneDisplay}`}>
+          {site.phoneHref && (
+            <a className="header-phone" href={site.phoneHref} aria-label={`Anrufen: ${site.phoneDisplay}`}>
             <Phone />
             <span>{site.phoneDisplay}</span>
           </a>
+          )}
           <a className="btn btn-primary" href="/pflege-anfragen/">
             Pflege anfragen
           </a>
@@ -74,9 +76,11 @@ export default function Header() {
           <a className="btn btn-primary" href="/pflege-anfragen/">
             Pflege anfragen
           </a>
-          <a className="btn btn-call" href={site.phoneHref}>
+          {site.phoneHref && (
+            <a className="btn btn-call" href={site.phoneHref}>
             <Phone /> {site.phoneDisplay}
           </a>
+          )}
         </nav>
       )}
     </header>

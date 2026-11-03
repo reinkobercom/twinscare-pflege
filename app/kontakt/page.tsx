@@ -7,7 +7,7 @@ import { Phone, Whatsapp, Pin, Clock } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Kontakt – TwinsCare Pflegedienst Bergedorf",
   description:
-    "So erreichen Sie TwinsCare: Telefon, WhatsApp, E-Mail und unser Büro in der Bergedorfer Straße 85, 21033 Hamburg-Bergedorf. Rückruf direkt online anfordern.",
+    "So erreichen Sie TwinsCare: E-Mail, Anfrageformular und unser Büro in der Bergedorfer Straße 85, 21033 Hamburg-Bergedorf. Rückruf direkt online anfordern.",
   alternates: { canonical: "/kontakt/" },
 };
 
@@ -24,20 +24,24 @@ export default function KontaktPage() {
             <h1>Kontakt</h1>
             <p className="page-lead">Rufen Sie an, schreiben Sie uns oder kommen Sie vorbei. Wir nehmen uns Zeit für Ihre Fragen.</p>
             <ul className="contact-list">
-              <li>
-                <Phone />
-                <div>
-                  <strong>Telefon</strong>
-                  <a href={site.phoneHref}>{site.phoneDisplay}</a>
-                </div>
-              </li>
-              <li>
-                <Whatsapp />
-                <div>
-                  <strong>WhatsApp</strong>
-                  <a href={site.whatsappHref}>Nachricht schreiben</a>
-                </div>
-              </li>
+              {site.phoneHref && (
+                <li>
+                  <Phone />
+                  <div>
+                    <strong>Telefon</strong>
+                    <a href={site.phoneHref}>{site.phoneDisplay}</a>
+                  </div>
+                </li>
+              )}
+              {site.whatsappHref && (
+                <li>
+                  <Whatsapp />
+                  <div>
+                    <strong>WhatsApp</strong>
+                    <a href={site.whatsappHref}>Nachricht schreiben</a>
+                  </div>
+                </li>
+              )}
               <li>
                 <Pin />
                 <div>
@@ -52,6 +56,7 @@ export default function KontaktPage() {
                   </a>
                 </div>
               </li>
+              {site.hours.length > 0 && (
               <li>
                 <Clock />
                 <div>
@@ -63,6 +68,7 @@ export default function KontaktPage() {
                   ))}
                 </div>
               </li>
+              )}
               <li>
                 <span className="contact-at" aria-hidden>
                   @

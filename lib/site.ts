@@ -9,13 +9,11 @@ export const site = {
   zip: "21033",
   city: "Hamburg",
   district: "Bergedorf",
-  phoneDisplay: "040 000 000 00", // TODO: Tracking-Nummer eintragen
-  phoneHref: "tel:+4940000000000", // TODO
-  whatsappHref: "https://wa.me/4940000000000", // TODO
+  phoneDisplay: "", // Tracking-Nummer eintragen, z. B. "040 123 456 78" – leer = alle Telefon-Buttons ausgeblendet
+  phoneHref: "", // z. B. "tel:+494012345678"
+  whatsappHref: "", // z. B. "https://wa.me/494012345678" – leer = WhatsApp ausgeblendet
   email: "info@twinscare-pflegedienst.de", // TODO: bestätigen
-  hours: [
-    { days: "Montag bis Freitag", time: "8:00 bis 17:00 Uhr" }, // TODO: bestätigen
-  ],
+  hours: [] as { days: string; time: string }[], // z. B. { days: "Montag bis Freitag", time: "8:00 bis 17:00 Uhr" }
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=Bergedorfer+Stra%C3%9Fe+85+21033+Hamburg",
 };

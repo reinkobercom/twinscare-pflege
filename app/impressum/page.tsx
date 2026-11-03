@@ -7,15 +7,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/impressum/" },
 };
 
-// ENTWURF: Die mit [eckigen Klammern] markierten Angaben liefert TwinsCare. Rechtliche Prüfung durch den Auftraggeber (Vertrag § 6 Abs. 4).
+// Angaben mit „folgt“ liefert TwinsCare. Rechtliche Prüfung durch den Auftraggeber (Vertrag § 6 Abs. 4).
 export default function ImpressumPage() {
   return (
     <main id="inhalt" className="wrap legal">
       <Breadcrumbs items={[{ href: "/impressum/", label: "Impressum" }]} />
       <h1>Impressum</h1>
-      <p className="draft-note">
-        Entwurf: Angaben in eckigen Klammern werden vor dem Livegang von TwinsCare ergänzt und rechtlich geprüft.
-      </p>
 
       <h2>Angaben gemäß § 5 DDG</h2>
       <p>
@@ -26,30 +23,29 @@ export default function ImpressumPage() {
         {site.zip} {site.city}
       </p>
       <p>
-        Registergericht: [Amtsgericht Hamburg]
+        Registergericht: folgt
         <br />
-        Registernummer: [HRA …]
+        Registernummer: folgt
       </p>
       <p>
-        Persönlich haftende Gesellschafterin: [Name der Komplementär-GmbH, Sitz, Registergericht, HRB …]
+        Persönlich haftende Gesellschafterin: folgt
         <br />
-        Vertreten durch die Geschäftsführung: [Name]
+        Vertreten durch die Geschäftsführung: folgt
       </p>
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: {site.phoneDisplay}
+        Telefon: {site.phoneDisplay || "folgt"}
         <br />
         E-Mail: {site.email}
       </p>
 
       <h2>Umsatzsteuer-ID</h2>
-      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [DE …] (falls vorhanden)</p>
+      <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: folgt</p>
 
       <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
       <p>
-        Verantwortliche Pflegefachkraft (Pflegedienstleitung): [Name], Berufsbezeichnung: [z. B. Pflegefachfrau/Pflegefachmann],
-        verliehen in der Bundesrepublik Deutschland.
+        Verantwortliche Pflegefachkraft (Pflegedienstleitung): folgt
         <br />
         Es gelten das Pflegeberufegesetz (PflBG) sowie die Vorschriften des SGB V und SGB XI.
       </p>
@@ -57,16 +53,16 @@ export default function ImpressumPage() {
       <h2>Versorgungsvertrag und zuständige Stellen</h2>
       <p>
         Zugelassen zur Versorgung durch Versorgungsvertrag nach § 72 SGB XI und Vertrag nach § 132a SGB V mit den
-        Landesverbänden der Pflege- und Krankenkassen in Hamburg. [Bitte bestätigen und ggf. ergänzen.]
+        Landesverbänden der Pflege- und Krankenkassen in Hamburg.
         <br />
-        Zuständige Aufsichtsbehörde: [z. B. Bezirksamt / Wohn-Pflege-Aufsicht – bitte ergänzen]
+        Zuständige Aufsichtsbehörde: folgt
       </p>
 
       <h2>Verbraucherstreitbeilegung</h2>
       <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
       <h2>Bildnachweise</h2>
-      <p>Platzhalterfotos: Unsplash (unsplash.com), Unsplash-Lizenz.</p>
+      <p>Fotos: Unsplash (unsplash.com), Unsplash-Lizenz.</p>
     </main>
   );
 }

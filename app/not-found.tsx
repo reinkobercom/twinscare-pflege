@@ -11,9 +11,15 @@ export default function NotFound() {
         <li><a href="/pflegedienst/">Unser Einsatzgebiet</a></li>
         <li><a href="/ratgeber/">Ratgeber</a></li>
       </ul>
-      <p>
-        Oder rufen Sie uns an: <a href={site.phoneHref}>{site.phoneDisplay}</a>
-      </p>
+      {site.phoneHref ? (
+        <p>
+          Oder rufen Sie uns an: <a href={site.phoneHref}>{site.phoneDisplay}</a>
+        </p>
+      ) : (
+        <p>
+          Oder schreiben Sie uns: <a href="/pflege-anfragen/">Anfrage senden</a>
+        </p>
+      )}
     </main>
   );
 }

@@ -36,13 +36,15 @@ export default function DankePage() {
               <p>Sie bekommen einen schriftlichen Kostenvoranschlag.</p>
             </li>
           </ol>
-          <p style={{ marginTop: "2rem" }}>
-            Ist es dringend? Rufen Sie uns direkt an:{" "}
-            <a href={site.phoneHref}>
-              <Phone width={18} height={18} style={{ display: "inline", verticalAlign: "-3px", color: "var(--red)" }} />{" "}
-              {site.phoneDisplay}
-            </a>
-          </p>
+          {site.phoneHref && (
+            <p style={{ marginTop: "2rem" }}>
+              Ist es dringend? Rufen Sie uns direkt an:{" "}
+              <a href={site.phoneHref}>
+                <Phone width={18} height={18} style={{ display: "inline", verticalAlign: "-3px", color: "var(--red)" }} />{" "}
+                {site.phoneDisplay}
+              </a>
+            </p>
+          )}
         </div>
       </section>
       <section className="section">

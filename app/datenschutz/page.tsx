@@ -13,18 +13,14 @@ export default function DatenschutzPage() {
     <main id="inhalt" className="wrap legal">
       <Breadcrumbs items={[{ href: "/datenschutz/", label: "Datenschutz" }]} />
       <h1>Datenschutzerklärung</h1>
-      <p className="draft-note">
-        Entwurf: Diese Datenschutzerklärung beschreibt den technischen Stand der Website. Sie muss vor dem Livegang von
-        TwinsCare bzw. einer Datenschutzberatung geprüft und ergänzt werden.
-      </p>
 
       <h2>1. Verantwortlicher</h2>
       <p>
         {site.legalName}, {site.street}, {site.zip} {site.city}
         <br />
-        Telefon: {site.phoneDisplay}, E-Mail: {site.email}
+        Telefon: {site.phoneDisplay || "folgt"}, E-Mail: {site.email}
         <br />
-        Datenschutzbeauftragte/r: [Name und Kontakt, falls bestellt]
+        Datenschutzbeauftragte/r: folgt
       </p>
 
       <h2>2. Hosting</h2>
@@ -33,7 +29,7 @@ export default function DatenschutzPage() {
         technisch notwendige Daten verarbeitet (IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browser). Rechtsgrundlage
         ist Art. 6 Abs. 1 lit. f DSGVO (sicherer und stabiler Betrieb). Mit Vercel besteht ein Auftragsverarbeitungsvertrag;
         die Übermittlung in die USA erfolgt auf Grundlage des EU-US Data Privacy Framework bzw. von
-        Standardvertragsklauseln. [Bitte prüfen.]
+        Standardvertragsklauseln.
       </p>
 
       <h2>3. Kontakt- und Anfrageformulare</h2>
@@ -46,10 +42,11 @@ export default function DatenschutzPage() {
         mit Wirkung für die Zukunft widerrufen, z. B. per E-Mail an {site.email}.
       </p>
       <p>
-        Für den Versand der Formularinhalte per E-Mail nutzen wir Resend (Resend, Inc., USA) als Auftragsverarbeiter. [Bitte
-        Auftragsverarbeitungsvertrag und Übermittlungsgrundlage ergänzen.] Ihre Daten löschen wir, sobald sie für die
-        Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen. [Konkrete Fristen
-        ergänzen.]
+        Für den Versand der Formularinhalte per E-Mail nutzen wir Resend (Resend, Inc., USA) als Auftragsverarbeiter.
+        Grundlage der Übermittlung in die USA: folgt. Die Formularinhalte erhält außerdem unsere Marketing-Agentur
+        VALIORA (RX2 Marketing GmbH, Stockumer Straße 30, 59368 Werne), die Anfragen in unserem Auftrag erfasst und
+        auswertet. Ihre Daten löschen wir, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine
+        gesetzlichen Aufbewahrungspflichten bestehen. Konkrete Speicherdauer: folgt.
       </p>
 
       <h2>4. Schriftarten</h2>
@@ -58,8 +55,7 @@ export default function DatenschutzPage() {
       <h2>5. Bilder</h2>
       <p>
         Einige Fotos werden derzeit vom Bilderdienst Unsplash (images.unsplash.com) geladen. Dabei wird Ihre IP-Adresse an
-        Unsplash übermittelt. [Hinweis: Vor dem Livegang werden die Platzhalterfotos durch eigene, lokal gespeicherte Bilder
-        ersetzt – dann entfällt dieser Abschnitt.]
+        Unsplash übermittelt.
       </p>
 
       <h2>6. Externe Links</h2>
@@ -70,8 +66,8 @@ export default function DatenschutzPage() {
 
       <h2>7. Statistik und Conversion-Messung</h2>
       <p>
-        [Wird ergänzt, sobald Google Tag Manager, Google Ads Conversion-Tracking oder ein Analysedienst eingebunden ist –
-        inklusive Consent-Banner.]
+        Derzeit setzen wir keine Analyse- oder Tracking-Dienste und keine Cookies zu Werbezwecken ein. Sobald sich das
+        ändert, ergänzen wir diesen Abschnitt und holen vorher Ihre Einwilligung ein.
       </p>
 
       <h2>8. Ihre Rechte</h2>

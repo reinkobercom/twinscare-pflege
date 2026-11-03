@@ -31,8 +31,13 @@ export default function BarrierefreiheitPage() {
       </p>
       <h2>Feedback</h2>
       <p>
-        Ist Ihnen eine Barriere aufgefallen? Schreiben Sie uns an <a href={`mailto:${site.email}`}>{site.email}</a> oder
-        rufen Sie an: <a href={site.phoneHref}>{site.phoneDisplay}</a>.
+        Ist Ihnen eine Barriere aufgefallen? Schreiben Sie uns an <a href={`mailto:${site.email}`}>{site.email}</a>
+        {site.phoneHref && (
+          <>
+            {" "}oder rufen Sie an: <a href={site.phoneHref}>{site.phoneDisplay}</a>
+          </>
+        )}
+        .
       </p>
     </main>
   );

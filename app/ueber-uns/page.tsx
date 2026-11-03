@@ -21,11 +21,6 @@ const sections: Section[] = [
         type: "p",
         text: "TwinsCare ist ein ambulanter Pflegedienst mit Sitz in der Bergedorfer Straße 85 in Hamburg-Bergedorf. Wir versorgen pflegebedürftige Menschen in ihrem Zuhause – in Bergedorf, Lohbrügge, Billstedt, Horn und Jenfeld sowie in Oststeinbek, Glinde, Reinbek und Wentorf.",
       },
-      {
-        type: "hinweis",
-        title: "Platz für Ihre Geschichte",
-        text: "Hier erzählt TwinsCare, wie das Unternehmen entstanden ist und was die Gründer antreibt. Den Text stimmen wir gemeinsam mit der Geschäftsführung ab.",
-      },
     ],
   },
   {
@@ -80,7 +75,6 @@ export default function UeberUnsPage() {
           <LinkCards
             title="Mehr über uns"
             items={[
-              { href: "/team/", title: "Unser Team", text: "Die Menschen hinter TwinsCare" },
               { href: "/leistungen/", title: "Unsere Leistungen", text: "Was wir für Sie tun können" },
               { href: "/pflegedienst/", title: "Unser Einsatzgebiet", text: orte.map((o) => o.name).join(", ") },
               { href: "/kontakt/", title: "Kontakt", text: `${site.street}, ${site.zip} ${site.city}` },

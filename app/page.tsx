@@ -4,7 +4,7 @@ import RueckrufForm from "@/components/RueckrufForm";
 import AreaMap from "@/components/AreaMap";
 import Photo from "@/components/Photo";
 import {
-  Phone, Check, Cross, Chevron, Whatsapp, Form, Star, Hands, Syringe, Pause, Basket, Talk, Clinic,
+  Phone, Check, Cross, Chevron, Whatsapp, Form, Hands, Syringe, Pause, Basket, Talk, Clinic,
   Shield, Home, People, Clock,
 } from "@/components/Icons";
 import { site, orte, leistungen, kapazitaet } from "@/lib/site";
@@ -26,7 +26,7 @@ const jsonLd = {
       legalName: site.legalName,
       url: site.domain,
       logo: `${site.domain}/logo.svg`,
-      telephone: site.phoneHref.replace("tel:", ""),
+      ...(site.phoneHref ? { telephone: site.phoneHref.replace("tel:", "") } : {}),
       email: site.email,
       address: {
         "@type": "PostalAddress",
@@ -51,12 +51,6 @@ const jsonLd = {
   ],
 };
 
-const team = [
-  { rolle: "Geschäftsführung", foto: "photo-1741707039536-113e200f9e0d" },
-  { rolle: "Pflegedienstleitung", foto: "photo-1587556930720-58ec521056a5" },
-  { rolle: "Pflegefachkraft", foto: "photo-1587500154541-1cafd74f0efc" },
-  { rolle: "Pflegeberatung", foto: "photo-1765896387398-1e1ae8d2eb85" },
-];
 
 export default function Startseite() {
   return (
@@ -84,9 +78,11 @@ export default function Startseite() {
                 <a className="btn btn-primary" href="/pflege-anfragen/">
                   Kostenlose Beratung anfragen
                 </a>
-                <a className="btn btn-call" href={site.phoneHref}>
+                {site.phoneHref && (
+                  <a className="btn btn-call" href={site.phoneHref}>
                   <Phone /> {site.phoneDisplay}
                 </a>
+                )}
               </div>
               <ul className="hero-facts">
                 <li>
@@ -343,57 +339,8 @@ export default function Startseite() {
           </div>
         </section>
 
-        {/* Stimmen */}
-        <section className="section" aria-labelledby="stimmen-titel">
-          <div className="wrap">
-            <div className="section-head">
-              <h2 id="stimmen-titel">Was Familien über uns sagen</h2>
-              <p>Hier erscheinen echte Google-Bewertungen, sobald die ersten vorliegen.</p>
-            </div>
-            <div className="reviews">
-              {["Lohbrügge", "Billstedt", "Reinbek"].map((ort) => (
-                <figure className="review" key={ort}>
-                  <div className="stars" aria-hidden>
-                    {[0, 1, 2, 3, 4].map((s) => (
-                      <Star key={s} />
-                    ))}
-                  </div>
-                  <p>Platzhalter für eine echte Google-Bewertung mit Text.</p>
-                  <footer>Angehörige aus {ort}</footer>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Team */}
-        <section className="section section-tint" aria-labelledby="team-titel">
-          <div className="wrap">
-            <div className="section-head section-head-split">
-              <div>
-                <h2 id="team-titel">Die Menschen, die zu Ihnen kommen</h2>
-                <p>Ein Team aus Bergedorf, das Pflege als Handwerk versteht.</p>
-              </div>
-              <a className="btn btn-ghost" href="/team/">
-                Das ganze Team
-              </a>
-            </div>
-            <div className="team">
-              {team.map(({ rolle, foto }) => (
-                <div className="member" key={rolle}>
-                  <div className="member-photo">
-                    <Photo id={foto} alt="" />
-                  </div>
-                  <h3>Name folgt</h3>
-                  <p>{rolle}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Ratgeber */}
-        <section className="section" aria-labelledby="ratgeber-titel">
+        <section className="section section-tint" aria-labelledby="ratgeber-titel">
           <div className="wrap">
             <div className="section-head section-head-split">
               <div>
@@ -413,10 +360,16 @@ export default function Startseite() {
           <div className="wrap faq-grid">
             <div className="faq-aside">
               <h2 id="faq-titel">Häufige Fragen</h2>
-              <p>Ihre Frage ist nicht dabei? Rufen Sie uns an, wir nehmen uns Zeit.</p>
-              <a className="btn btn-call" href={site.phoneHref}>
-                <Phone /> {site.phoneDisplay}
-              </a>
+              <p>Ihre Frage ist nicht dabei? Schreiben Sie uns, wir nehmen uns Zeit.</p>
+              {site.phoneHref ? (
+                <a className="btn btn-call" href={site.phoneHref}>
+                  <Phone /> {site.phoneDisplay}
+                </a>
+              ) : (
+                <a className="btn btn-call" href="/pflege-anfragen/">
+                  Frage stellen
+                </a>
+              )}
             </div>
             <div className="faq">
               {faqs.map((f, i) => (
@@ -444,12 +397,16 @@ export default function Startseite() {
                 zu Hause.
               </p>
               <div className="closing-ctas">
-                <a className="btn btn-light" href={site.phoneHref}>
+                {site.phoneHref && (
+                  <a className="btn btn-light" href={site.phoneHref}>
                   <Phone style={{ color: "var(--red)" }} /> {site.phoneDisplay}
                 </a>
-                <a className="btn btn-outline-light" href={site.whatsappHref}>
+                )}
+                {site.whatsappHref && (
+                  <a className="btn btn-outline-light" href={site.whatsappHref}>
                   <Whatsapp /> WhatsApp
                 </a>
+                )}
               </div>
             </div>
             <RueckrufForm />

@@ -16,7 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/ratgeber/", 0.7],
     ["/haeufige-fragen/", 0.6],
     ["/ueber-uns/", 0.5],
-    ["/team/", 0.4],
     ["/kontakt/", 0.6],
     ["/impressum/", 0.1],
     ["/datenschutz/", 0.1],

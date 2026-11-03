@@ -18,9 +18,11 @@ export default function Footer() {
               {site.zip} {site.city}-{site.district}
             </address>
             <ul>
-              <li>
-                Telefon: <a href={site.phoneHref}>{site.phoneDisplay}</a>
-              </li>
+              {site.phoneHref && (
+                <li>
+                  Telefon: <a href={site.phoneHref}>{site.phoneDisplay}</a>
+                </li>
+              )}
               <li>
                 E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a>
               </li>

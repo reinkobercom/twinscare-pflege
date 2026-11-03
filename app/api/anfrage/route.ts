@@ -4,8 +4,8 @@ import { Resend } from "resend";
 // Eine Route für alle Anfragen der Website (Rückruf, Pflegegrad-Rechner, später Anfrage-Funnel).
 // Benötigte Umgebungsvariablen in Vercel:
 // RESEND_API_KEY  – API-Key aus Resend
-// MAIL_FROM       – verifizierter Absender, z. B. "TwinsCare Website <website@twinscare-pflegedienst.de>"
-// MAIL_TO         – Empfänger der Anfragen, mehrere mit Komma getrennt
+// MAIL_FROM       – verifizierter Absender: "Twinscare Pflegedienst - VALIORA <leads@reinkober-leadportal.com>"
+// MAIL_TO         – Empfänger, mit Komma getrennt: leads@reinkober.agency,info@twinscare-pflegedienst.de
 
 const esc = (s: string) =>
   s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
@@ -13,6 +13,9 @@ const str = (v: unknown, max = 200) => String(v ?? "").trim().slice(0, max);
 const yes = (v: unknown) => v === "on" || v === true || v === "true";
 
 type Feld = [label: string, wert: string];
+
+// Betreff-Format: „Neue Anfrage | Twinscare Pflegedienst - VALIORA | <Art der Anfrage>“
+const betreffFuer = (art: string) => `Neue Anfrage | Twinscare Pflegedienst - VALIORA | ${art}`;
 
 export async function POST(req: Request) {
   let b: Record<string, unknown>;
@@ -57,7 +60,7 @@ export async function POST(req: Request) {
         { status: 422 }
       );
     }
-    betreff = `Pflegegrad-Rechner: ${name} (${plz})`;
+    betreff = betreffFuer("Pflegegrad-Rechner");
     felder.push(
       ["E-Mail", email],
       ["PLZ", plz],
@@ -80,7 +83,7 @@ export async function POST(req: Request) {
         { status: 422 }
       );
     }
-    betreff = `Pflegeanfrage: ${name}${plz ? ` (${plz})` : ""}`;
+    betreff = betreffFuer("Pflegeanfrage");
     felder.push(
       ["E-Mail", email || "–"],
       ["Für wen", str(b.fuerWen)],
@@ -94,7 +97,7 @@ export async function POST(req: Request) {
       ["Quelle", str(b.quelle, 120) || "Anfrage-Formular"]
     );
   } else if (typ === "rueckruf") {
-    betreff = `Rückrufwunsch: ${name}`;
+    betreff = betreffFuer("Rückrufwunsch");
     felder.push(["Erreichbar", str(b.zeit, 30) || "Egal"], ["Quelle", str(b.quelle, 120) || "Rückruf-Formular"]);
   } else {
     return NextResponse.json({ error: "Unbekannter Anfragetyp." }, { status: 400 });

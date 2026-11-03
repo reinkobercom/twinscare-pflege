@@ -20,8 +20,8 @@ npm run dev
 | Variable | Beispiel |
 | --- | --- |
 | `RESEND_API_KEY` | `re_…` |
-| `MAIL_FROM` | `TwinsCare Website <website@twinscare-pflegedienst.de>` (Domain in Resend verifizieren) |
-| `MAIL_TO` | `info@twinscare-pflegedienst.de` |
+| `MAIL_FROM` | `Twinscare Pflegedienst - VALIORA <leads@reinkober-leadportal.com>` (Domain in Resend verifiziert) |
+| `MAIL_TO` | `leads@reinkober.agency,info@twinscare-pflegedienst.de` |
 
 ## Unternehmensdaten
 Telefon, WhatsApp, E-Mail und Öffnungszeiten stehen zentral in `lib/site.ts`.

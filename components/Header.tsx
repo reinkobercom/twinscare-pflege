@@ -30,7 +30,7 @@ export default function Header() {
       </a>
       <div className="wrap header-inner">
         <a className="brand" href="/" aria-label="TwinsCare – zur Startseite">
-          <img src="/logo-kompakt.svg" alt="TwinsCare Ambulanter Pflegedienst" width="160" height="46" />
+          <img src="/logo.svg" alt="TwinsCare Ambulanter Pflegedienst GmbH & Co. KG" width="209" height="60" />
         </a>
         <nav className="main-nav" aria-label="Hauptnavigation">
           <ul>

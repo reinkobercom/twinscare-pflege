@@ -31,7 +31,7 @@
   --radius-l: 28px;
   --wrap: 1180px;
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
-  --header-h: 76px;
+  --header-h: 84px;
 }
 
 *,
@@ -232,7 +232,7 @@ a {
   flex: none;
 }
 .brand img {
-  height: 46px;
+  height: 60px;
   width: auto;
 }
 .main-nav {
@@ -319,10 +319,10 @@ a {
 }
 @media (max-width: 640px) {
   :root {
-    --header-h: 66px;
+    --header-h: 72px;
   }
   .brand img {
-    height: 38px;
+    height: 48px;
   }
   .header-actions .btn-primary {
     display: none;

@@ -2670,3 +2670,19 @@ fieldset.field {
 .rechner-layout h1 {
   font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
 }
+
+/* Rote Buttons immer mit weißer Schrift – auch innerhalb von Fließtext, Listen und Kästen,
+   in denen Links sonst blau sind. Doppelte Klasse für höhere Spezifität. */
+.btn.btn-call,
+.btn.btn-call:link,
+.btn.btn-call:visited,
+.btn.btn-call:hover,
+.btn.btn-call:focus-visible,
+.btn.btn-call:active,
+.btn.btn-call svg,
+.callback-fab,
+.callback-fab svg,
+.action-bar a.call,
+.action-bar a.call svg {
+  color: #fff;
+}

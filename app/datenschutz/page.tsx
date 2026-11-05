@@ -48,7 +48,7 @@ export default function DatenschutzPage() {
         <br />
         {site.street}, {site.zip} {site.city}
         <br />
-        Telefon: {site.phoneDisplay || "folgt"}
+        Telefon: {site.impressum.telefon}
         <br />
         E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a>
       </p>

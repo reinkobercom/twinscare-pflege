@@ -24,6 +24,23 @@ const sections: Section[] = [
     ],
   },
   {
+    h2: "Wer leitet die Pflege bei TwinsCare?",
+    blocks: [
+      {
+        type: "p",
+        text: `Die fachliche Verantwortung für Ihre Pflege liegt bei unserer Pflegedienstleitung **${site.impressum.pdl}**. Vertreten wird sie von **${site.impressum.stvPdl}** als stellvertretender Pflegedienstleitung. Beide planen die Einsätze, sind Ansprechpartnerinnen für Angehörige, Ärztinnen und Ärzte und achten darauf, dass die Pflege so läuft wie besprochen.`,
+      },
+      {
+        type: "ul",
+        items: [
+          `**Pflegedienstleitung:** ${site.impressum.pdl}`,
+          `**Stellvertretende Pflegedienstleitung:** ${site.impressum.stvPdl}`,
+          `**Geschäftsführung:** ${site.impressum.geschaeftsfuehrer}`,
+        ],
+      },
+    ],
+  },
+  {
     h2: "Wofür stehen wir?",
     blocks: [
       { type: "p", text: "Gute Pflege braucht Zeit, Verlässlichkeit und Ehrlichkeit. Daran lassen wir uns messen." },

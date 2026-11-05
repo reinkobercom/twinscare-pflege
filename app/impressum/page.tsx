@@ -5,12 +5,13 @@ import { Breadcrumbs } from "@/components/content";
 export const metadata: Metadata = {
   title: "Impressum | TwinsCare ambulanter Pflegedienst Bergedorf",
   description:
-    "Impressum der Twins Care ambulanter Pflegedienst GmbH & Co. KG, Bergedorfer Straße 85, 21033 Hamburg: Anbieterkennzeichnung und Kontakt.",
+    "Impressum der Twins Care Ambulanter Pflegedienst GmbH & Co. KG, Bergedorfer Straße 85, 21033 Hamburg: Anbieterkennzeichnung und Kontakt.",
   alternates: { canonical: "/impressum/" },
 };
 
 // Angaben mit „folgt“ liefert TwinsCare. Rechtliche Prüfung durch den Auftraggeber (Vertrag § 6 Abs. 4).
 export default function ImpressumPage() {
+  const i = site.impressum;
   return (
     <main id="inhalt" className="wrap legal">
       <Breadcrumbs items={[{ href: "/impressum/", label: "Impressum" }]} />
@@ -25,39 +26,56 @@ export default function ImpressumPage() {
         {site.zip} {site.city}
       </p>
       <p>
-        Registergericht: folgt
+        Persönlich haftende Gesellschafterin: {i.komplementaerin}
         <br />
-        Registernummer: folgt
-      </p>
-      <p>
-        Persönlich haftende Gesellschafterin: folgt
-        <br />
-        Vertreten durch die Geschäftsführung: folgt
+        Geschäftsführer: {i.geschaeftsfuehrer}
       </p>
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: {site.phoneDisplay || "folgt"}
+        Telefon: <a href={`tel:+49${i.telefon.replace(/\D/g, "").slice(1)}`}>{i.telefon}</a>
         <br />
-        E-Mail: {site.email}
+        Fax: {i.fax}
+        <br />
+        E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a>
+      </p>
+
+      <h2>Handelsregister</h2>
+      <p>
+        <strong>{site.legalName}</strong>
+        <br />
+        Registergericht: folgt
+        <br />
+        Registernummer (HRA): folgt
+      </p>
+      <p>
+        <strong>{i.komplementaerin}</strong>
+        <br />
+        Registergericht: folgt
+        <br />
+        Registernummer (HRB): folgt
       </p>
 
       <h2>Umsatzsteuer-ID</h2>
       <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: folgt</p>
 
-      <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+      <h2>Pflegedienstleitung und berufsrechtliche Angaben</h2>
       <p>
-        Verantwortliche Pflegefachkraft (Pflegedienstleitung): folgt
+        Pflegedienstleitung: {i.pdl}
         <br />
-        Es gelten das Pflegeberufegesetz (PflBG) sowie die Vorschriften des SGB V und SGB XI.
+        Stellvertretende Pflegedienstleitung: {i.stvPdl}
+        <br />
+        Institutionskennzeichen (IK): {i.ik}
       </p>
+      <p>Es gelten das Pflegeberufegesetz (PflBG) sowie die Vorschriften des SGB V und SGB XI.</p>
 
-      <h2>Versorgungsvertrag und zuständige Stellen</h2>
+      <h2>Zuständige Aufsichtsbehörde</h2>
       <p>
-        Zugelassen zur Versorgung durch Versorgungsvertrag nach § 72 SGB XI und Vertrag nach § 132a SGB V mit den
-        Landesverbänden der Pflege- und Krankenkassen in Hamburg.
+        Bezirksamt Altona – Fachamt Gesundheit
         <br />
-        Zuständige Aufsichtsbehörde: folgt
+        Behringstraße 122
+        <br />
+        22763 Hamburg
       </p>
 
       <h2>Verbraucherstreitbeilegung</h2>

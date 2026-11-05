@@ -1,7 +1,7 @@
 # Redaktionsleitfaden TwinsCare (für alle Inhaltsdateien)
 
 ## Unternehmen – nur diese Fakten verwenden
-- Name: TwinsCare (Twins Care ambulanter Pflegedienst GmbH & Co. KG), ambulanter Pflegedienst
+- Name: TwinsCare (Twins Care Ambulanter Pflegedienst GmbH & Co. KG), ambulanter Pflegedienst
 - Büro: Bergedorfer Straße 85, 21033 Hamburg-Bergedorf
 - Leistungen: ambulante Pflege (Grundpflege, SGB XI), Behandlungspflege (SGB V, ärztliche Verordnung), Verhinderungspflege (§ 39 SGB XI), Entlastungsleistungen (§ 45b SGB XI), Pflegeberatung inkl. Beratungseinsatz nach § 37 Abs. 3 SGB XI, Pflege nach dem Krankenhaus
 - Einsatzgebiet (genau diese 9 Orte): Bergedorf, Lohbrügge, Billstedt, Horn, Jenfeld (Hamburg) sowie Oststeinbek, Glinde, Reinbek (Kreis Stormarn) und Wentorf bei Hamburg (Kreis Herzogtum Lauenburg)

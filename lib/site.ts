@@ -3,7 +3,17 @@
 
 export const site = {
   name: "TwinsCare",
-  legalName: "Twins Care ambulanter Pflegedienst GmbH & Co. KG",
+  legalName: "Twins Care Ambulanter Pflegedienst GmbH & Co. KG",
+  // Pflichtangaben laut Kunde (05.11.2026). „folgt“ = noch nicht geliefert.
+  impressum: {
+    komplementaerin: "Twins Care Verwaltungs GmbH",
+    geschaeftsfuehrer: "Alireza Sayahi",
+    pdl: "Frau Baloku",
+    stvPdl: "Frau Rick-Stöver",
+    telefon: "0172 7553512", // Kontaktnummer fürs Impressum; Telefon-Buttons nutzen phoneDisplay (Tracking-Nummer)
+    fax: "folgt",
+    ik: "460217864",
+  },
   domain: "https://www.twinscare-pflegedienst.de",
   street: "Bergedorfer Straße 85",
   zip: "21033",

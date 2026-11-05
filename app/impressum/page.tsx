@@ -78,11 +78,55 @@ export default function ImpressumPage() {
         22763 Hamburg
       </p>
 
-      <h2>Verbraucherstreitbeilegung</h2>
-      <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <h2>Hinweise zur Streitbeilegung</h2>
+      <p>
+        <strong>Verbraucherstreitbeilegung (§ 36 VSBG):</strong> Wir sind nicht bereit und nicht verpflichtet, an
+        Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+
+      <h2>Haftung für Inhalte</h2>
+      <p>
+        Für eigene Inhalte auf diesen Seiten sind wir nach § 7 Abs. 1 DDG und den allgemeinen Gesetzen verantwortlich.
+        Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter nicht verpflichtet, übermittelte oder gespeicherte fremde
+        Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+        Pflichten zur Entfernung oder Sperrung von Informationen nach den allgemeinen Gesetzen bleiben davon unberührt.
+        Eine Haftung ist erst ab dem Zeitpunkt möglich, zu dem wir von einer konkreten Rechtsverletzung Kenntnis erhalten.
+        Sobald uns eine solche Rechtsverletzung bekannt wird, entfernen wir die betreffenden Inhalte umgehend.
+      </p>
+      <p>
+        Die Inhalte dieser Website dienen der allgemeinen Information und ersetzen keine persönliche Beratung durch
+        Ärztinnen, Ärzte, Pflegekassen oder unser Pflegeteam. Beträge und Leistungen der Pflege- und Krankenversicherung
+        geben wir sorgfältig wieder; sie können sich durch gesetzliche Änderungen jedoch ändern.
+      </p>
+
+      <h2>Haftung für Links</h2>
+      <p>
+        Diese Website enthält Links zu externen Websites Dritter. Auf deren Inhalte haben wir keinen Einfluss und
+        übernehmen dafür keine Gewähr; verantwortlich ist stets der jeweilige Anbieter oder Betreiber der verlinkten
+        Seite. Bei der Verlinkung haben wir die Seiten auf mögliche Rechtsverstöße geprüft, rechtswidrige Inhalte waren
+        zu diesem Zeitpunkt nicht erkennbar. Eine fortlaufende Kontrolle der verlinkten Seiten ist ohne konkrete
+        Anhaltspunkte für eine Rechtsverletzung nicht zumutbar. Wird uns eine Rechtsverletzung bekannt, entfernen wir den
+        betreffenden Link umgehend.
+      </p>
+
+      <h2>Urheberrecht</h2>
+      <p>
+        Die von uns erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.
+        Vervielfältigung, Bearbeitung, Verbreitung und jede Verwertung außerhalb der Grenzen des Urheberrechts bedürfen
+        der schriftlichen Zustimmung der jeweiligen Urheberin oder des jeweiligen Urhebers. Downloads und Kopien dieser
+        Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+      </p>
+      <p>
+        Soweit Inhalte nicht von uns erstellt wurden, beachten wir die Urheberrechte Dritter und kennzeichnen diese
+        Inhalte entsprechend. Sollten Sie dennoch auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
+        Hinweis an <a href={`mailto:${site.email}`}>{site.email}</a>. Wird uns eine Rechtsverletzung bekannt, entfernen
+        wir die betreffenden Inhalte umgehend.
+      </p>
 
       <h2>Bildnachweise</h2>
       <p>Fotos: Unsplash (unsplash.com), Unsplash-Lizenz.</p>
+
+      <p className="legal-stand">Stand: November 2026</p>
     </main>
   );
 }
